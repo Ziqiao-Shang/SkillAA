@@ -1,0 +1,312 @@
+{
+  "stable_rule_graph": {
+    "frozen": false,
+    "nodes": [
+      {
+        "id": "D001",
+        "title": "Visible Document Evidence First",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "",
+        "how_to_use": "- Read the document carefully before answering.",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "D009",
+        "title": "Smallest Requested Text Span",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 1,
+        "when_to_use": "",
+        "how_to_use": "- Prefer the smallest exact text span that answers the question.",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "D010",
+        "title": "Requested Value-Span Boundary",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "For questions asking for a value, count, page number, date, or graph reading",
+        "how_to_use": "- return only the requested value span; omit nearby labels, category names, units, or explanatory words unless the question explicitly asks for them.",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "D002",
+        "title": "Layout-Supported Alternative",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 1,
+        "when_to_use": "When several nearby strings look similar",
+        "how_to_use": "- choose the one whose surrounding labels or layout best match the question.",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "D003",
+        "title": "Exact Document Surface Form",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "",
+        "how_to_use": "- Copy names, numbers, and dates exactly from the document whenever possible.\n\n- Preserve the document's exact spelling and punctuation for names and quoted phrases;",
+        "avoid": [
+          "do not substitute similar letters or change straight/curly quotes, spacing, or parentheses when the visible text provides them."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "D004",
+        "title": "Direct Extraction over Paraphrase",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "",
+        "how_to_use": "- Prefer direct extraction over paraphrase.",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "D011",
+        "title": "Final Nearby-Alternative Check",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "Before finalizing",
+        "how_to_use": "- compare the answer against nearby alternatives and keep the best-supported exact span.",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "D005",
+        "title": "Table Row-and-Column Lookup",
+        "section": "task_types",
+        "category": "task",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "For tables",
+        "how_to_use": "- first find the row or entry named in the question, then read the value under the requested column, header, date, or category; answer with that cell only.",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "D006",
+        "title": "Form Label-to-Value Lookup",
+        "section": "task_types",
+        "category": "task",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "For forms, receipts, or labeled fields",
+        "how_to_use": "- locate the exact role, party, or field label mentioned in the question, then copy the filled-in value from the same line, box, block, or immediately adjacent field.",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "D007",
+        "title": "Indexed List Entry Lookup",
+        "section": "task_types",
+        "category": "task",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "For table-of-contents, indexed, numbered, or bulleted lists",
+        "how_to_use": "- match the requested title, entry, or point number, then follow the same line or list item to the associated value;",
+        "avoid": [
+          "do not take a nearby value from another item."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "D008",
+        "title": "Anchored Handwriting and Nearby Text",
+        "section": "specialized_recovery",
+        "category": "recovery",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "For handwritten or list/table questions with an anchor term",
+        "how_to_use": "- first locate the anchor, then inspect the immediately adjacent text in the same row, column, or nearby margin. If legible, provide the best-supported nearby span rather than leaving the answer blank.",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      }
+    ],
+    "edges": [
+      {
+        "id": "E001",
+        "source": "D001",
+        "target": "D009",
+        "type": "prereq",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E002",
+        "source": "D002",
+        "target": "D009",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E003",
+        "source": "D003",
+        "target": "D009",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E004",
+        "source": "D004",
+        "target": "D009",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E005",
+        "source": "D005",
+        "target": "D002",
+        "type": "prereq",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E006",
+        "source": "D006",
+        "target": "D002",
+        "type": "prereq",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E007",
+        "source": "D007",
+        "target": "D002",
+        "type": "prereq",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E008",
+        "source": "D008",
+        "target": "D002",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E009",
+        "source": "D010",
+        "target": "D009",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E010",
+        "source": "D011",
+        "target": "D009",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      }
+    ],
+    "common_mistakes": []
+  }
+}

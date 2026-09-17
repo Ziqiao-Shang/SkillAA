@@ -1,0 +1,604 @@
+{
+  "stable_rule_graph": {
+    "frozen": false,
+    "nodes": [
+      {
+        "id": "D001",
+        "title": "Visible Document Evidence First",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "",
+        "how_to_use": "- Read the document carefully before answering.",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "D009",
+        "title": "Smallest Requested Text Span",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 1,
+        "when_to_use": "",
+        "how_to_use": "- Prefer the smallest exact text span that answers the question.",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "D010",
+        "title": "Requested Value-Span Boundary",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "For questions asking for a value, count, page number, date, or graph reading",
+        "how_to_use": "- return only the requested value span; omit nearby labels, category names, units, or explanatory words unless the question explicitly asks for them.",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "D002",
+        "title": "Layout-Supported Alternative",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 1,
+        "when_to_use": "When several nearby strings look similar",
+        "how_to_use": "- choose the one whose surrounding labels or layout best match the question.",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "D003",
+        "title": "Exact Document Surface Form",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "",
+        "how_to_use": "- Copy names, numbers, and dates exactly from the document whenever possible.\n\n- Preserve the document's exact spelling and punctuation for names and quoted phrases;",
+        "avoid": [
+          "do not substitute similar letters or change straight/curly quotes, spacing, or parentheses when the visible text provides them."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "D004",
+        "title": "Direct Extraction over Paraphrase",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "",
+        "how_to_use": "- Prefer direct extraction over paraphrase.",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "D011",
+        "title": "Final Nearby-Alternative Check",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "Before finalizing",
+        "how_to_use": "- compare the answer against nearby alternatives and keep the best-supported exact span.",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "D005",
+        "title": "Table Row-and-Column Lookup",
+        "section": "task_types",
+        "category": "task",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "For tables",
+        "how_to_use": "- first find the row or entry named in the question, then read the value under the requested column, header, date, or category; answer with that cell only.",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "D006",
+        "title": "Form Label-to-Value Lookup",
+        "section": "task_types",
+        "category": "task",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "For forms, receipts, or labeled fields",
+        "how_to_use": "- locate the exact role, party, or field label mentioned in the question, then copy the filled-in value from the same line, box, block, or immediately adjacent field.",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "D007",
+        "title": "Indexed List Entry Lookup",
+        "section": "task_types",
+        "category": "task",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "For table-of-contents, indexed, numbered, or bulleted lists",
+        "how_to_use": "- match the requested title, entry, or point number, then follow the same line or list item to the associated value;",
+        "avoid": [
+          "do not take a nearby value from another item."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "D008",
+        "title": "Anchored Handwriting and Nearby Text",
+        "section": "specialized_recovery",
+        "category": "recovery",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "For handwritten or list/table questions with an anchor term",
+        "how_to_use": "- first locate the anchor, then inspect the immediately adjacent text in the same row, column, or nearby margin. If legible, provide the best-supported nearby span rather than leaving the answer blank.",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "D012",
+        "title": "Explicit Spatial-Locator Verification",
+        "section": "general_principles",
+        "category": "learned",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When the question explicitly specifies a line, region, row, column, side, corner, or relative position in the visible document.",
+        "how_to_use": "- Read the document carefully before answering.\n- Resolve the specified spatial locator using visible layout anchors and boundaries.\n- Verify that the candidate text actually occupies the requested line, region, row, column, side, corner, or relative position before extracting the answer span.",
+        "avoid": [
+          "Do not accept a plausible text line or region without verifying its requested visual position.",
+          "Do not substitute prominent or nearby text from a different document region."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "D013",
+        "title": "Identical Multi-Period Value Collapse",
+        "section": "general_principles",
+        "category": "learned",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When a question asks for one singular value across multiple explicitly selected periods or cells, and every selected cell visibly contains the same value.",
+        "how_to_use": "Inspect every selected cell before formatting the answer. If all selected values are identical, return that value once as the smallest complete answer span. If the values differ, or the question explicitly requests each period's value, return the responsive values separately in the requested order.",
+        "avoid": [
+          "Do not collapse values before resolving every requested row, column, period, or other selector.",
+          "Do not collapse differing values.",
+          "Do not collapse an intrinsically multi-item answer or values explicitly requested separately for each period."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "D014",
+        "title": "Open-Ended Time Marker Preservation",
+        "section": "general_principles",
+        "category": "learned",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When the selected requested time is visibly followed by a dash, no ending time is displayed, and the dash is attached or aligned as part of that time expression.",
+        "how_to_use": "Return the complete requested time expression with the trailing dash retained as its open-ended range marker. Omit only external labels, unrelated separators, and explanatory text. Before finalizing, if the trailing dash belongs to the selected open-ended time span and the gap before it is only layout whitespace, delete that gap so the dash directly follows the time, as in 8:15-. Preserve the spacing when it is visibly part of the exact expression.",
+        "avoid": [
+          "Do not remove a trailing dash merely because the ending time is absent.",
+          "Do not include a dash that separates the time from an unrelated label or neighboring entry.",
+          "Do not broaden the answer beyond the selected time expression.",
+          "Do not retain layout whitespace between the time and its attached open-ended marker.",
+          "Do not remove spacing that is visibly part of the exact time expression."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "D015",
+        "title": "Visible Locality over Inferred Geographic Category",
+        "section": "general_principles",
+        "category": "learned",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When a location question names a geographic category that is not explicitly printed in the source, but a visible address or location line contains a locality that directly supplies the available answer span.",
+        "how_to_use": "- Preserve the visible address evidence and return the smallest printed locality span that answers the location question.\n- Do not convert that locality into an inferred state, country, region, or other unprinted geographic category.\n- If the requested geographic category is explicitly printed or multiple locality candidates are present, use the source's labels, layout, and explicit relations to select the matching span.",
+        "avoid": [
+          "Inferring an unprinted state, country, region, or other geographic category from a visible city or address.",
+          "Selecting a semantically related geographic label that does not appear in the answer-bearing source text.",
+          "Ignoring an explicitly printed category value or the observable relation that distinguishes nearby location candidates."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "D016",
+        "title": "Role-Resolved Nearby Alternative",
+        "section": "general_principles",
+        "category": "learned",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When D002 has found nearby plausible candidates and one of these visible exceptional structures is present: an ordered author list plus a role-labeled field for the same author; same-type entity names in sender-header and recipient-address regions; a named person or group beside several itinerary events; or a cover with title or ownership entities plus report-attribution or contributor entities.",
+        "how_to_use": "- Resolve the question relation before choosing a span. If an ordered author list identifies the requested author and an explicit role-labeled field visibly names that same person more completely, use the list for identity or order and extract the complete name from the role field. If same-type entities occur in sender and recipient regions, use the sender or institutional header for a generic document-identity question with no addressee cue, but use the recipient block when an explicit recipient or addressee relation is requested. If a named party is beside a multi-event itinerary, establish its event attachment from grouping, indentation, continuation lines, and event sequence before comparing arrival or departure labels. If organizations occur on a cover, select the entity attached to the title, jurisdiction, or ownership heading and exclude entities appearing only under report-by, prepared-by, committee, collaboration, contributor, or cooperation wording. After the relation is resolved, return the smallest complete supported span.",
+        "avoid": [
+          "Do not choose a candidate merely because it is first, longer, more complete, closer, or repeats the event word.",
+          "Do not replace a directly labeled recipient, sender, row, field, or title association with a generic role preference.",
+          "Do not treat report authorship, preparation, committee membership, collaboration, contribution, or cooperation as title ownership without a visible ownership association.",
+          "Do not expand an abbreviated name unless a visible role-labeled field identifies the same person."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "D017",
+        "title": "Non-Unique SkillAAssociation Resolver",
+        "section": "general_principles",
+        "category": "learned",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "For a table, structured list, schedule, or itinerary where D005 cannot identify one unique direct intersection because the requested phrase partially matches multiple or hierarchical row labels, or because a named person or group is adjacent to multiple event lines and times.",
+        "how_to_use": "- If a query phrase occurs inside longer or repeated stub labels, enumerate the matching labels and resolve the complete row path using full wording, indentation, parent grouping, section boundaries, and the requested header before reading any value. If a named person or group is beside a multi-event schedule, trace the entry through grouping, indentation, continuation lines, and event sequence to determine which event is attached to that party; only then read the requested event's time. Once the row path or event attachment is verified, extract the requested aligned cell or value only.",
+        "avoid": [
+          "Do not activate when the question and table provide a unique direct row-column, heading-cell, inverse-row, ordinal-row, total-row, or extremum lookup.",
+          "Do not accept the first row containing a partial phrase as the requested row.",
+          "Do not select an itinerary time solely because its line repeats arrival, departure, or another event word from the question.",
+          "Do not cross section, parent-group, row, entry, or continuation boundaries."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "D018",
+        "title": "Verify Visually Ambiguous Characters Before Exact Copying",
+        "section": "general_principles",
+        "category": "learned",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "Use after the answer-bearing field, row, or span has been selected when one or more characters or separators in that selected span remain visually ambiguous, such as an uncertain letter sequence in a name or project title or an uncertain separator in a handwritten numeric or time value.",
+        "how_to_use": "Re-inspect the smallest ambiguous portion in its original field or row. Compare the visible stroke or glyph shape with the rest of the selected span, the field's observable value type, and nearby formatting conventions in the same document. Resolve each uncertain character from this combined visible evidence before applying exact-surface copying. For a handwritten time separator, distinguish a colon, decimal point, or apostrophe from the visible mark and field format rather than defaulting to an apostrophe. Once resolved, preserve the verified surface form exactly.",
+        "avoid": [
+          "Do not activate this specialist when the selected span is already clearly legible.",
+          "Do not normalize or replace clearly visible spelling, capitalization, punctuation, spacing, slashes, decimals, date separators, currency marks, or other formatting.",
+          "Do not use expected format alone to override visible glyph evidence.",
+          "Do not use character verification to choose among different fields, rows, roles, or nearby candidate spans."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "D019",
+        "title": "Conditional Count and Entity Boundary Normalization",
+        "section": "general_principles",
+        "category": "learned",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "After D010 has selected a value span, when either (a) a how-many question requests the count itself and the selected phrase has an approximation word such as “nearly” or “about” immediately before the numeral, or (b) a requested named entity is preceded by a grammatical article that is not visibly part of the proper name.",
+        "how_to_use": "For branch (a), return the numeral, optionally with a directly requested unit, without the preceding approximation word unless the question explicitly requests the qualified wording. For branch (b), remove only the non-integral grammatical article and return the proper-name span; retain an article that is visibly part of the name or explicitly requested.",
+        "avoid": [
+          "Do not strip qualifiers that are part of a complete printed field value or explicitly requested.",
+          "Do not remove articles that are integral to the visible proper name.",
+          "Do not use boundary normalization to choose among unresolved candidate values."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "D020",
+        "title": "Exact Printed Field Expression Preservation",
+        "section": "general_principles",
+        "category": "learned",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "After the answer-bearing field has been located, when the question names or quotes that field and explicitly asks what is printed, and the visible answer is a combined field expression containing the field name and its associated value.",
+        "how_to_use": "Return the complete visible field expression, including the field name and associated value. If the question instead asks for the field's value, continue to omit the label under D010.",
+        "avoid": [
+          "Do not include labels for ordinary value-only field questions.",
+          "Do not include region descriptions, neighboring fields, or explanatory text.",
+          "Do not use this rule to select among unresolved fields."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      }
+    ],
+    "edges": [
+      {
+        "id": "E001",
+        "source": "D001",
+        "target": "D009",
+        "type": "prereq",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E002",
+        "source": "D002",
+        "target": "D009",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E003",
+        "source": "D003",
+        "target": "D009",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E004",
+        "source": "D004",
+        "target": "D009",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E005",
+        "source": "D005",
+        "target": "D002",
+        "type": "prereq",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E006",
+        "source": "D006",
+        "target": "D002",
+        "type": "prereq",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E007",
+        "source": "D007",
+        "target": "D002",
+        "type": "prereq",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E008",
+        "source": "D008",
+        "target": "D002",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E009",
+        "source": "D010",
+        "target": "D009",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E010",
+        "source": "D011",
+        "target": "D009",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E011",
+        "source": "D001",
+        "target": "D012",
+        "type": "enhance",
+        "weight": "strong",
+        "rationale": "Spatial questions require an explicit layout-position check after the document is read; this edge activates that specialist without changing the evidence-first base rule.",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E012",
+        "source": "D010",
+        "target": "D013",
+        "type": "enhance",
+        "weight": "strong",
+        "rationale": "Value-span extraction needs conditional deduplication only after every requested cell has been checked and all selected values are identical.",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E013",
+        "source": "D010",
+        "target": "D014",
+        "type": "enhance",
+        "weight": "strong",
+        "rationale": "Value-span extraction must preserve a visibly attached trailing dash when it marks an open-ended time rather than an unrelated separator.",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E014",
+        "source": "D004",
+        "target": "D015",
+        "type": "enhance",
+        "weight": "strong",
+        "rationale": "Direct extraction should prefer the printed locality and must not replace it with an inferred, unprinted geographic category.",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E015",
+        "source": "D002",
+        "target": "D016",
+        "type": "enhance",
+        "weight": "strong",
+        "rationale": "The activation edge keeps the specialist attached to the unchanged D002 base rule and is supported by all four D002-attributed failures.",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E016",
+        "source": "D005",
+        "target": "D017",
+        "type": "enhance",
+        "weight": "strong",
+        "rationale": "The activation edge keeps the non-unique-association specialist attached to D005 and is directly supported by the partial-row and multi-event schedule failures.",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E017",
+        "source": "D003",
+        "target": "D018",
+        "type": "enhance",
+        "weight": "strong",
+        "rationale": "The edge confines the failure-supported ambiguity check to an observable exception of D003 rather than rewriting the high-exposure base rule.",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E018",
+        "source": "D010",
+        "target": "D019",
+        "type": "enhance",
+        "weight": "strong",
+        "rationale": "Value-span extraction sometimes requires boundary normalization for approximation-qualified counts or non-integral articles, while preserving qualifiers and articles that belong to the requested text.",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E019",
+        "source": "D010",
+        "target": "D020",
+        "type": "enhance",
+        "weight": "strong",
+        "rationale": "When the question asks what is printed in a named field, the complete field expression is required; ordinary value-only questions still use the smaller value span.",
+        "active": true,
+        "frozen": false
+      }
+    ],
+    "common_mistakes": []
+  }
+}

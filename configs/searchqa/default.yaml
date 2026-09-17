@@ -1,0 +1,26 @@
+_base_: ../_base_/default.yaml
+
+train:
+  train_size: 800
+
+env:
+  name: searchqa
+  skill_init: graphopt/envs/searchqa/initial_skill/best_graph.json
+  split_mode: split_dir
+  split_ratio: update_only_quadruples_with_independent_held_out_test
+  split_dir: data/searchqa
+  max_turns: 1
+  immutable_prompt_file: immutable_prompt.md
+  semantic_reasoning_trace: false
+  max_completion_tokens: 16384
+  exec_timeout: 120
+  workers: 24
+  openlux_workers: 8
+  openlux_request_timeout: 300
+  openlux_request_retries: 2
+  openlux_recovery_rounds: 1
+  limit: 0
+  require_official_full_dataset: true
+  validate_dataset_assets: true
+  no_validation_split: true
+  no_test_split: false

@@ -1,0 +1,12 @@
+{
+  "schema_version": "graphopt-frozen-prompt",
+  "environment": "searchqa",
+  "method": "initial_skill_reasoning",
+  "source_type": "graph",
+  "graph": "best_graph.json",
+  "immutable_prompt": "immutable_prompt.md",
+  "graph_render_protocol": "legacy",
+  "include_edge_rationale": true,
+  "system_prompt_template": "system_prompt_template.md",
+  "output": "best_prompt.md"
+}

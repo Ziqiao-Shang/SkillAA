@@ -1,0 +1,636 @@
+{
+  "stable_rule_graph": {
+    "frozen": false,
+    "nodes": [
+      {
+        "id": "M001",
+        "title": "Recognize Stronger-Result Meta-Options",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When an option says that one of the remaining options is correct but a stronger result can be proven, especially when the question asks for the strongest statement",
+        "how_to_use": "- Treat that meta-option as a serious candidate.",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M002",
+        "title": "Prefer an Unlisted Strictly Stronger Conclusion",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 1,
+        "when_to_use": "When a concrete option is true but the theorem or derivation gives a strictly stronger conclusion that is not exactly listed",
+        "how_to_use": "- Choose the stronger-result meta-option.",
+        "avoid": [
+          "Do not settle for the weaker concrete statement."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M003",
+        "title": "Rank Nested Conclusions by Strength",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When the answer options are nested by logical or quantitative strength",
+        "how_to_use": "- Rank the options explicitly before answering. Finite-time blowup is stronger than merely not globally bounded; positive stable growth is stronger than ordinary unboundedness; sharper constants, rates, exceptional-set bounds, endpoint inclusion, and full equivalences are stronger than weaker asymptotic versions.",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M004",
+        "title": "Compare Every Option Before Selection",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 1,
+        "when_to_use": "",
+        "how_to_use": "- Compare all options before committing and select the strongest statement justified by the visible question and hypotheses.",
+        "avoid": [
+          "Do not choose a nearby option merely because it is plausible when it is weaker, overstrong, or misses an equality case."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M005",
+        "title": "Track Exact Quantifiers",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When options or hypotheses use quantifiers such as there exists, for every, if and only if, or exactly when",
+        "how_to_use": "- Preserve each quantifier exactly while comparing the theorem with the options.",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M006",
+        "title": "Require Support for Converse and Classification Claims",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When considering a converse, realization, classification, if-and-only-if, or exactly-all claim",
+        "how_to_use": "- Require the visible theorem or derivation to prove the added direction or classification.",
+        "avoid": [
+          "Do not add converse, realization, or classification claims to a one-way implication."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M007",
+        "title": "Detect Weakened Conclusions",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When an option drops a characterization, equality clause, or full equivalence from the justified conclusion",
+        "how_to_use": "- Treat the omission as a genuine weakening when ranking the options.",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M008",
+        "title": "Detect Overstated Conclusions",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When an option upgrades regularity, removes scale restrictions, or changes an existential statement into a universal one",
+        "how_to_use": "- Mark the option as stronger than the theorem actually proves.",
+        "avoid": [
+          "Do not silently strengthen regularity, scope, scale, or quantifiers."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M009",
+        "title": "Verify Both Directions of an Equivalence",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "For biconditional or equivalence questions",
+        "how_to_use": "- Verify necessity and sufficiency separately.",
+        "avoid": [
+          "Reject a condition that is merely necessary or merely sufficient when equivalence is required."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M010",
+        "title": "Check the Exact Threshold Sign",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "For threshold conditions whose options differ by the sign of a parameter",
+        "how_to_use": "- Verify the exact sign, such as distinguishing \\(\\mu_0\\) from \\(-\\mu_0\\).",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M011",
+        "title": "Rank Logical Scope by Strength",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When options differ by for every versus for sufficiently large, or by local versus global domains",
+        "how_to_use": "- Rank the statements by logical strength and match the sharpest version justified by the theorem.",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M012",
+        "title": "Match Every Hypothesis and Domain Restriction",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When matching a theorem-shaped option to the visible hypotheses",
+        "how_to_use": "- Verify every assumption and the exact domain before accepting the conclusion.",
+        "avoid": [
+          "Do not accept a distractor that preserves the theorem's shape while altering a required assumption."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M013",
+        "title": "Check Equality, Extremality, and Family Scope",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When options differ on an equality case, an extremal condition, or whether the result covers the full family or only a restricted subfamily",
+        "how_to_use": "- Match each boundary and family-scope clause exactly.",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M014",
+        "title": "Return One Option Label",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 2,
+        "when_to_use": "After completing the mathematical comparison",
+        "how_to_use": "- Output the final answer as the single option label only.",
+        "avoid": [
+          "Do not append explanation outside the required graph_usage sidecar."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M015",
+        "title": "Distinguish Global from Localized Conclusions",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When a conclusion holds only after localization, completion, or at each prime or scale",
+        "how_to_use": "- Treat that conclusion as weaker than an unqualified global equivalence.",
+        "avoid": [
+          "Do not promote a localized or completed equivalence to an unqualified global one."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M016",
+        "title": "Compare Estimate Exponents, Indices, and Constants",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "For estimate-heavy options",
+        "how_to_use": "- Compare the exponent, derivative-index range, constants, and every stated parameter dependence.",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M017",
+        "title": "Reject Broader Non-Equivalent Conditions",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When one option replaces an exact condition with a broader one, such as congruence modulo a divisor instead of modulo the full modulus",
+        "how_to_use": "- Compare the admitted cases and require the same solution set for an equivalence.",
+        "avoid": [
+          "Do not accept the broader condition unless the stated domain collapses all extra cases."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M018",
+        "title": "Check Strict versus Non-Strict Endpoints",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When threshold or range options differ by strict versus non-strict inequalities",
+        "how_to_use": "- Distinguish \\(<\\) from \\(\\le\\) and verify whether the endpoint is included.",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M019",
+        "title": "Assign the Equality Case to the Correct Regime",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 1,
+        "when_to_use": "When a threshold separates positive, zero, and negative parameter regimes",
+        "how_to_use": "- Determine explicitly which regime contains the equality case.",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M020",
+        "title": "Compare Estimate Correction Terms",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When quantitative options differ by rates, exceptional-set bounds, logarithmic factors, or additive terms",
+        "how_to_use": "- Compare every correction term and quantitative refinement exactly.",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M021",
+        "title": "Compare Directionality and Convergence Mode",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When estimate options differ by one-sided versus two-sided notation or pointwise versus uniform convergence",
+        "how_to_use": "- Preserve the stated directionality and convergence mode exactly.",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      }
+    ],
+    "edges": [
+      {
+        "id": "E001",
+        "source": "M001",
+        "target": "M002",
+        "type": "prereq",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E002",
+        "source": "M003",
+        "target": "M002",
+        "type": "prereq",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E003",
+        "source": "M002",
+        "target": "M004",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E004",
+        "source": "M005",
+        "target": "M011",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E005",
+        "source": "M005",
+        "target": "M009",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E006",
+        "source": "M006",
+        "target": "M009",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E007",
+        "source": "M007",
+        "target": "M004",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E008",
+        "source": "M008",
+        "target": "M004",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E009",
+        "source": "M017",
+        "target": "M009",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E010",
+        "source": "M009",
+        "target": "M004",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E011",
+        "source": "M010",
+        "target": "M019",
+        "type": "prereq",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E012",
+        "source": "M018",
+        "target": "M019",
+        "type": "prereq",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E013",
+        "source": "M019",
+        "target": "M013",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E014",
+        "source": "M011",
+        "target": "M003",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E015",
+        "source": "M015",
+        "target": "M011",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E016",
+        "source": "M012",
+        "target": "M004",
+        "type": "prereq",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E017",
+        "source": "M013",
+        "target": "M004",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E018",
+        "source": "M016",
+        "target": "M020",
+        "type": "co_occur",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E019",
+        "source": "M020",
+        "target": "M021",
+        "type": "co_occur",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E020",
+        "source": "M016",
+        "target": "M004",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E021",
+        "source": "M020",
+        "target": "M004",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E022",
+        "source": "M021",
+        "target": "M004",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E023",
+        "source": "M004",
+        "target": "M014",
+        "type": "prereq",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      }
+    ],
+    "common_mistakes": []
+  }
+}

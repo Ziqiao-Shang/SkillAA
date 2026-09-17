@@ -1,0 +1,24 @@
+# Fixed SkillAA release configuration.
+_base_: hyperparams.yaml
+
+model:
+  backend: azure_openai
+  teacher_profile: teacher_gpt56
+  optimizer: gpt-5.6-sol
+  target: gpt-5.6-sol
+  openlux_routing: nitro
+  student_openlux_routing: nitro
+  teacher_openlux_routing: nitro
+  openlux_routing_style: suffix
+  optimizer_backend: openai_chat
+  target_backend: openai_chat
+  reasoning_effort: medium
+  teacher_request_timeout: 300
+  azure_openai_endpoint: "https://api.openlux.ai/v1"
+  azure_openai_api_version: "openai-compat"
+  azure_openai_api_key: ""
+  azure_openai_auth_mode: "openai_compatible"
+
+env:
+  name: searchqa
+  out_root: ""

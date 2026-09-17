@@ -1,0 +1,1157 @@
+{
+  "stable_rule_graph": {
+    "frozen": false,
+    "nodes": [
+      {
+        "id": "M001",
+        "title": "Recognize Stronger-Result Meta-Options",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When an option says that one of the remaining options is correct but a stronger result can be proven, especially when the question asks for the strongest statement",
+        "how_to_use": "- Treat that meta-option as a serious candidate.",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M002",
+        "title": "Prefer an Unlisted Strictly Stronger Conclusion",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 1,
+        "when_to_use": "When a concrete option is true but the theorem or derivation gives a strictly stronger conclusion that is not exactly listed",
+        "how_to_use": "- Choose the stronger-result meta-option.",
+        "avoid": [
+          "Do not settle for the weaker concrete statement."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M003",
+        "title": "Rank Nested Conclusions by Strength",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When the answer options are nested by logical or quantitative strength",
+        "how_to_use": "- Rank the options explicitly before answering. Finite-time blowup is stronger than merely not globally bounded; positive stable growth is stronger than ordinary unboundedness; sharper constants, rates, exceptional-set bounds, endpoint inclusion, and full equivalences are stronger than weaker asymptotic versions.",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M004",
+        "title": "Compare Every Option Before Selection",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 1,
+        "when_to_use": "",
+        "how_to_use": "- Compare all options before committing and select the strongest statement justified by the visible question and hypotheses.",
+        "avoid": [
+          "Do not choose a nearby option merely because it is plausible when it is weaker, overstrong, or misses an equality case."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M005",
+        "title": "Track Exact Quantifiers",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When options or hypotheses use quantifiers such as there exists, for every, if and only if, or exactly when",
+        "how_to_use": "- Preserve each quantifier exactly while comparing the theorem with the options.",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M006",
+        "title": "Require Support for Converse and Classification Claims",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When considering a converse, realization, classification, if-and-only-if, or exactly-all claim",
+        "how_to_use": "- Require the visible theorem or derivation to prove the added direction or classification.",
+        "avoid": [
+          "Do not add converse, realization, or classification claims to a one-way implication."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M007",
+        "title": "Detect Weakened Conclusions",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When an option drops a characterization, equality clause, or full equivalence from the justified conclusion",
+        "how_to_use": "- Treat the omission as a genuine weakening when ranking the options.",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M008",
+        "title": "Detect Overstated Conclusions",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When an option upgrades regularity, removes scale restrictions, or changes an existential statement into a universal one",
+        "how_to_use": "- Mark the option as stronger than the theorem actually proves.",
+        "avoid": [
+          "Do not silently strengthen regularity, scope, scale, or quantifiers."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M009",
+        "title": "Verify Both Directions of an Equivalence",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "For biconditional or equivalence questions",
+        "how_to_use": "- Verify necessity and sufficiency separately.",
+        "avoid": [
+          "Reject a condition that is merely necessary or merely sufficient when equivalence is required."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M010",
+        "title": "Check the Exact Threshold Sign",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "For threshold conditions whose options differ by the sign of a parameter",
+        "how_to_use": "- Verify the exact sign, such as distinguishing \\(\\mu_0\\) from \\(-\\mu_0\\).",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M011",
+        "title": "Rank Logical Scope by Strength",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When options differ by for every versus for sufficiently large, or by local versus global domains",
+        "how_to_use": "- Rank the statements by logical strength and match the sharpest version justified by the theorem.",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M012",
+        "title": "Match Every Hypothesis and Domain Restriction",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When matching a theorem-shaped option to the visible hypotheses",
+        "how_to_use": "- Verify every assumption and the exact domain before accepting the conclusion.",
+        "avoid": [
+          "Do not accept a distractor that preserves the theorem's shape while altering a required assumption."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M013",
+        "title": "Check Equality, Extremality, and Family Scope",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When options differ on an equality case, an extremal condition, or whether the result covers the full family or only a restricted subfamily",
+        "how_to_use": "- Match each boundary and family-scope clause exactly.",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M014",
+        "title": "Return One Option Label",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 2,
+        "when_to_use": "After completing the mathematical comparison",
+        "how_to_use": "- Output the final answer as the single option label only.",
+        "avoid": [
+          "Do not append explanation outside the required graph_usage sidecar."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M015",
+        "title": "Distinguish Global from Localized Conclusions",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When a conclusion holds only after localization, completion, or at each prime or scale",
+        "how_to_use": "- Treat that conclusion as weaker than an unqualified global equivalence.",
+        "avoid": [
+          "Do not promote a localized or completed equivalence to an unqualified global one."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M016",
+        "title": "Compare Estimate Exponents, Indices, and Constants",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "For estimate-heavy options",
+        "how_to_use": "- Compare the exponent, derivative-index range, constants, and every stated parameter dependence.",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M017",
+        "title": "Reject Broader Non-Equivalent Conditions",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When one option replaces an exact condition with a broader one, such as congruence modulo a divisor instead of modulo the full modulus",
+        "how_to_use": "- Compare the admitted cases and require the same solution set for an equivalence.",
+        "avoid": [
+          "Do not accept the broader condition unless the stated domain collapses all extra cases."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M018",
+        "title": "Check Strict versus Non-Strict Endpoints",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When threshold or range options differ by strict versus non-strict inequalities",
+        "how_to_use": "- Distinguish \\(<\\) from \\(\\le\\) and verify whether the endpoint is included.",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M019",
+        "title": "Assign the Equality Case to the Correct Regime",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 1,
+        "when_to_use": "When a threshold separates positive, zero, and negative parameter regimes",
+        "how_to_use": "- Determine explicitly which regime contains the equality case.",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M020",
+        "title": "Compare Estimate Correction Terms",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When quantitative options differ by rates, exceptional-set bounds, logarithmic factors, or additive terms",
+        "how_to_use": "- Compare every correction term and quantitative refinement exactly.",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M021",
+        "title": "Compare Directionality and Convergence Mode",
+        "section": "general_principles",
+        "category": "general",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When estimate options differ by one-sided versus two-sided notation or pointwise versus uniform convergence",
+        "how_to_use": "- Preserve the stated directionality and convergence mode exactly.",
+        "avoid": [],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M022",
+        "title": "Componentwise Curvature by Penalized Separation",
+        "section": "general_principles",
+        "category": "learned",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When a connected unbounded Euclidean domain has C2 disconnected boundary with outward mean curvature H >= 0, and candidate conclusions differ on whether infimum-zero curvature holds for some boundary component or every component.",
+        "how_to_use": "1. Verify connectedness, unboundedness, C2 boundary regularity, mean convexity, and boundary disconnectedness. 2. Fix an arbitrary boundary component Sigma and choose a distinct component. 3. Assume for contradiction that inf_Sigma H > 0. 4. Minimize a penalized distance between the components so minimizing pairs remain bounded and penalty terms vanish in the limit. 5. Use first variation for near-normal incidence and second variation along matched tangent directions to compare mean curvatures. 6. Contradict the fixed positive lower bound on Sigma using mean convexity on the other component and the vanishing penalty errors. 7. Since Sigma was arbitrary, conclude inf_Sigma H = 0 for every boundary component before comparing options.",
+        "avoid": [
+          "Do not infer only an existential component from generic quantifier ranking before testing an arbitrary component.",
+          "Do not use an unpenalized inter-component minimum when minimizing pairs may escape to infinity.",
+          "Do not claim pointwise zero curvature or attainment of the infimum."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M023",
+        "title": "Distinguish Structural from Underlying Equivalence",
+        "section": "general_principles",
+        "category": "learned",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When candidate conclusions differ between equivalence of underlying objects and an isomorphism or equivalence required to preserve a bundle, map, fibration, action, projection, or other auxiliary structure.",
+        "how_to_use": "1. Identify every structure each candidate requires to be preserved. 2. Check the theorem, hypotheses, and derivation for explicit compatibility with each auxiliary structure in the stronger claim. 3. Retain the stronger structure-preserving conclusion only when that compatibility is established; otherwise retain only the supported underlying-object equivalence or diffeomorphism. 4. Compare the remaining candidates clause by clause and stop at the strongest claim whose preservation requirements are all justified.",
+        "avoid": [
+          "Do not infer a bundle isomorphism, equivariance, map compatibility, or preservation of a projection from an equivalence or diffeomorphism of the underlying objects alone."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M024",
+        "title": "Lift Equidistribution Through Structural Fibers",
+        "section": "general_principles",
+        "category": "learned",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When candidate equidistribution statements differ by an added statistic and the objects admit a common structural partition such as fibers indexed by shape, type, or another invariant.",
+        "how_to_use": "1. Identify common structural fibers for all compared object families. 2. Check whether the added statistic is constant or determined within each fiber. 3. Check whether the remaining statistics have matching distributions separately within every corresponding fiber. 4. Sum the fiberwise generating-function identities over all fibers. 5. Retain the refined joint equidistribution when both checks hold; otherwise stop at the weaker distribution actually established.",
+        "avoid": [
+          "Do not discard a refinement merely because it is stronger than a known marginal identity.",
+          "Do not infer a refined distribution from a marginal equidistribution without verifying the structural-fiber and fiberwise-equidistribution conditions."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M025",
+        "title": "Globalize Intermediate Dense-Open Identifications",
+        "section": "general_principles",
+        "category": "learned",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When a family argument first identifies fibers or constructs auxiliary structure only on a dense open subset and the hypotheses also include a connected base together with separated or Hausdorff moduli, rigidity, or continuation.",
+        "how_to_use": "1. Verify that the dense-open statement is an auxiliary step rather than the final assertion. 2. Check whether separatedness, Hausdorffness, rigidity, or continuation propagates the identification across the connected base. 3. If propagation applies, state the identification for every parameter and remove the apparent exceptional set. 4. If no propagation mechanism is justified, retain the dense-open scope and possible exceptions.",
+        "avoid": [
+          "Do not treat a dense-open auxiliary locus as a final limitation when the stated rigidity mechanism globalizes it.",
+          "Do not remove exceptional parameters without an explicit propagation mechanism and a connected base."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M026",
+        "title": "Exhaust Complementary Structural Regimes",
+        "section": "general_principles",
+        "category": "learned",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When a candidate theorem concerns an entire algebraic family or all primes, but available constructions or criteria are stated separately for torsion, element-order, quotient, character, exceptional-prime, or generic-prime cases. Activate only when the displayed constructions or criteria form an explicitly exhaustive partition of the required domain.",
+        "how_to_use": "1. Preserve the universal scope and identify the visible structural or prime-local distinction. 2. Partition the groups or primes into exhaustive regimes, including exceptional and generic cases. 3. In each regime, apply the construction or local criterion that actually belongs there. 4. Record the conclusion in every regime and verify that any shared invariant supplies the required local conditions. 5. Combine the regime conclusions into one uniform result before ranking options. 6. Reject a candidate only if a regime remains uncovered or unsupported. 7. Combine only the conclusion established in every regime; do not promote a witness, quotient, character, homomorphism, or construction used in one regime into a uniform structural conclusion unless that same structure is proved across all regimes.",
+        "avoid": [
+          "Do not reject a uniform conclusion merely because one fixed quotient, character family, homomorphism, or exceptional-prime argument is unavailable in part of the domain.",
+          "Do not treat exceptional-prime results as exhaustive without checking the generic-prime regime.",
+          "Do not rank options until conclusions from all regimes have been combined.",
+          "Do not infer a uniform witness construction from regime-specific proofs when only their final conclusion is shared."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M027",
+        "title": "Validate Option Semantics Before Final Comparison",
+        "section": "general_principles",
+        "category": "learned",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When theorem-shaped options visibly differ by restating fixed premises, using canonical terminology versus a paraphrase, adding a separate conjunct, or changing an exact quantitative theorem form.",
+        "how_to_use": "1. If the stem already fixes assumptions and asks for a consequence, compare conclusions without rewarding or requiring redundant premise restatement. 2. If a canonical mathematical term competes with a paraphrase, expand the term and treat the statements as equivalent only when every component matches; otherwise prefer the exact supported formulation. 3. If one option adds a conjunct, require independent theorem or derivation support for that conjunct before ranking the option above its weaker core. 4. If options differ quantitatively, verify the governing theorem's exact tower height, exponent structure, constants, quantifiers, and domain before ordering them. 5. After the applicable branch is resolved, return to complete option comparison.",
+        "avoid": [
+          "Do not treat repeated stem assumptions as a stronger conclusion.",
+          "Do not treat surface explicitness as stronger than equivalent canonical terminology.",
+          "Do not accept an added conjunct merely because it strengthens a supported core statement.",
+          "Do not rank quantitative options from an unverified recalled theorem form."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M028",
+        "title": "Separate Stated Scope from Unsupported Additions",
+        "section": "general_principles",
+        "category": "learned",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When matching a theorem-shaped option and the alternatives differ through unstated infeasible-instance behavior, a definition supplied only as context, or a larger fixed interior radius.",
+        "how_to_use": "1. For an algorithmic theorem stated as finding a requested object, preserve its literal guarantee and input domain; do not require explicit no-solution reporting or add a feasibility premise unless stated. 2. When the prompt defines terminology, separate that definition from properties actually asserted by the theorem; require explicit support before importing a defined strengthening into the conclusion. 3. When otherwise similar estimates use different interior radii, identify the exact radius guaranteed by the theorem before ranking strength and reject every unsupported enlargement. 4. After resolving the applicable branch, preserve all other assumptions and domains exactly and continue to option comparison.",
+        "avoid": [
+          "Do not add infeasible-instance handling or a no-solution requirement absent from the theorem and question.",
+          "Do not promote a contextual definition into an asserted theorem conclusion.",
+          "Do not infer a larger interior estimate domain merely because it remains inside the ambient equation domain."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M029",
+        "title": "Validate Intrinsic Temporal Scaling",
+        "section": "general_principles",
+        "category": "learned",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When candidate parabolic Holder estimates differ in the power of the time increment inside the intrinsic metric.",
+        "how_to_use": "Separate the inner time power from the outer Holder exponent and record both for each candidate. Check whether the stated theorem explicitly supplies the inner time power; if not, derive it only from an available justified scaling or energy calculation. Reject any candidate whose inner power or accompanying metric factors remain unsupported, even if it appears sharper. Update the comparison with the validated estimate, then stop when the strongest fully supported statement, including an applicable stronger-result meta-option, has been identified.",
+        "avoid": [
+          "Do not infer the inner time power solely from the diffusion parameter or confuse it with the outer Holder exponent."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M030",
+        "title": "Establish Per-Quantity Quantitative Baselines",
+        "section": "general_principles",
+        "category": "learned",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When answer options assign similar or specialized estimates to multiple named quantities, especially with differing signs, exponents, correction terms, or scopes.",
+        "how_to_use": "1. For each named quantity, independently verify the justified sign, exponent, correction terms, normalization, and scope from the question and available theorem evidence. 2. Record these attributes as a separate tuple and keep each tuple attached to its quantity. 3. Compare every candidate against the corresponding tuple component by component; do not infer an assignment from distractor arrangement or from a plausible exact-looking pair. 4. Check whether each concrete statement is exactly justified, weaker than the established result, or unsupported. 5. If no concrete option states the full justified result but a stronger-result option is supported, select that meta-option; otherwise stop at the strongest fully justified concrete statement.",
+        "avoid": [
+          "Do not swap estimates between named quantities.",
+          "Do not match options using only a shared leading form while ignoring signs, secondary factors, correction terms, or scope.",
+          "Do not reject a stronger-result meta-option merely because a concrete statement appears to match an unverified assignment."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M031",
+        "title": "Read Sequence Scope from the Conclusion",
+        "section": "general_principles",
+        "category": "learned",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When a theorem about a sequence includes convergence assumptions and candidate conclusions differ between an unqualified sequence-wide estimate and an estimate only for sufficiently large indices.",
+        "how_to_use": "Read the index quantifier from the theorem's conclusion independently of convergence statements in its hypotheses. If the conclusion is unqualified in the sequence index, preserve that sequence-wide scope and rank it above a tail-only option. If the conclusion explicitly says sufficiently large indices or supplies a threshold, preserve that eventual scope and its threshold. After fixing the conclusion-level scope, compare the remaining domains and quantitative clauses normally.",
+        "avoid": [
+          "Do not infer a sufficiently-large-index restriction solely from a convergence hypothesis.",
+          "Do not remove an eventual-index restriction or threshold that is explicitly stated in the conclusion."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M032",
+        "title": "Validate the Source of Quantitative Fields",
+        "section": "general_principles",
+        "category": "learned",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When estimate options differ in an exact rate, a combinatorial prefactor, or the allowed dependencies of a constant, and those fields could be inferred from qualitative facts, indexing conventions, or intermediate proof estimates rather than read from the final result.",
+        "how_to_use": "First record the applicable final theorem's exact quantitative fields, including exponents, correction factors, prefactors, ranges, and declared constant dependencies. Then use the observable branch that applies. If a rate is being inferred from qualitative regularity, accept it only when the final theorem or a required derivation establishes that exact rate. If a factorial or symmetry factor is proposed, inspect the indexing convention and add it only when an independent ordering or multiplicity is established. If constant dependencies differ, use the final theorem's declared dependency list; do not import broader dependence from an intermediate estimate, and accept narrower dependence only when the final theorem or derivation explicitly proves that uniformity. Pass the validated fields back to whole-option comparison.",
+        "avoid": [
+          "Do not infer an exponent from qualitative regularity alone.",
+          "Do not add a factorial or symmetry factor merely from the number of indexed components.",
+          "Do not import proof-level dependencies that the final theorem does not retain.",
+          "Do not accept dependence on fewer inputs merely because it gives a stronger estimate."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M033",
+        "title": "Bound Families by Injective Subset Sums",
+        "section": "general_principles",
+        "category": "learned",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When a finite family of positive integers lies in {1,...,n} and distinct subsets are stated or proved to have distinct sums.",
+        "how_to_use": "Let m be the family size and first verify that the subset-sum map is injective. Count 2^m subset sums, then bound every sum between 0 and mn, giving at most mn+1 attainable integer values and hence 2^m <= mn+1. Solve this exponential-versus-polynomial inequality to obtain m <= log_2 n + O(log_2 log_2 n). Stop at that precision unless a separate stated theorem or derivation proves a sharper correction term.",
+        "avoid": [
+          "Do not infer a specific log-log coefficient, an O(1) remainder, or any other sharper secondary term from the basic counting inequality alone."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M034",
+        "title": "Guarded Semantic Strength Comparison",
+        "section": "general_principles",
+        "category": "learned",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When answer choices differ by logical implication, witness domain, contradictory or incomparable conclusions, added algorithmic or representational guarantees, or an intermediate container claimed to strengthen a conclusion.\nOnly activate this comparison procedure when the relevant implication, equivalence, inclusion, contradiction, or support for each added clause can be established from the supplied hypotheses, an explicitly available theorem, a definition, or a valid derivation. If the comparison instead requires an unstated theorem or a new fact about an enlarged domain, do not use this procedure to select the claim.",
+        "how_to_use": "- Compare the complete propositions componentwise, including hypotheses, quantifiers, domains, witness dependencies, formulas, and added clauses.\n- Before ranking, test whether the conclusions are genuinely compatible and nested under implication. Treat contradictory or incomparable conclusions separately and determine which is theorem-supported.\n- For existential claims, compare allowed witness domains by inclusion; a witness guaranteed in a smaller domain is stronger unless the domains are equivalent under the hypotheses.\n- Do not treat explicit, operational, algorithmic, representational, uniformity, or output-format detail as logical strength without independent support for every added guarantee.\n- Before counting an intermediate algebra or container as a refinement, test whether it is automatically generated by the finitely many objects already known to lie in the ambient algebra; if so, treat the formulations as equivalent.\n- After these guards, preserve supported conjunctions, exact quantifier scopes, and stronger-result meta-option behavior, selecting the maximal fully justified conclusion.\n- First branch on observable support: if the supplied material establishes the needed implication, equivalence, inclusion, contradiction, or every component of a conjunction, perform the structural ranking.\n- Otherwise, if the alternatives are contradictory or incomparable, retain them as separate candidates and use only an explicitly supported theorem or derivation to determine which is true; the structural comparison alone cannot supply that truth.\n- If an option broadens the hypothesis domain, require support on the added domain before ranking it above a narrower theorem statement.\n- If an option adds an algorithm, representation, certificate, approximation interface, uniform bound, or output condition, require explicit support for that complete formulation; general terminology or a proof sketch does not automatically establish the added interface.\n- If the available evidence does not resolve the unsupported factual difference, leave the ranking unresolved rather than completing it from plausibility.",
+        "avoid": [
+          "Do not rank mutually exclusive claims as stronger and weaker.",
+          "Do not reject a subgroup-witness conclusion merely because its witness domain is narrower.",
+          "Do not prefer a more explicit operational formulation without independent support for its extra guarantees.",
+          "Do not count an automatically generated finitely generated container as a strict strengthening.",
+          "Do not alter the original hypotheses, domains, quantifiers, or supported conclusion categories.",
+          "Do not infer that a theorem extends to a broader domain from the option structure alone.",
+          "Do not choose one side of a contradiction merely because its conjunction appears more detailed or stronger.",
+          "Do not convert a proof method or general computability claim into a specific output contract unless that contract is independently established."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M035",
+        "title": "Bind Parenthetical Regularity Parameters",
+        "section": "general_principles",
+        "category": "learned",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When an existence conclusion describes an object as C^{r,gamma} and states gamma only parenthetically as belonging to an interval, while alternatives differ between existence for some admissible gamma and existence for every gamma in that interval",
+        "how_to_use": "- Determine the binder of gamma before ranking the alternatives.\n- If the statement says only that there exists a C^{r,gamma} object with gamma in the interval, treat gamma as existentially bound and select the some-gamma formulation.\n- Preserve an every-gamma formulation only when the theorem explicitly quantifies over every gamma or establishes validity uniformly across the interval.",
+        "avoid": [
+          "Do not infer a universal quantifier from interval membership alone.",
+          "Do not weaken an explicitly universal gamma range to an existential claim.",
+          "Do not prefer an every-gamma option merely because it is stronger."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M036",
+        "title": "Conjunct-by-Conjunct Support Check",
+        "section": "general_principles",
+        "category": "learned",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When one candidate statement contains another candidate's supported conclusion plus additional conjuncts, bounds, regularity conditions, or auxiliary guarantees",
+        "how_to_use": "Verify each added conjunct independently against the visible theorem or derivation. If any added property lacks support, reject only the embellished candidate while keeping the fully supported clauses eligible.",
+        "avoid": [
+          "Do not treat an option as stronger merely because it adds auxiliary boundedness, regularity, or guarantee clauses.",
+          "Do not discard supported clauses when only an added conjunct is unsupported."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "M037",
+        "title": "Boundary, Endpoint, and Exceptional-Index Verification",
+        "section": "general_principles",
+        "category": "learned",
+        "node_type": "rule",
+        "level": 0,
+        "when_to_use": "When a theorem or candidate classification differs at an endpoint, equality boundary, exceptional base index, or the boundary between piecewise branches.",
+        "how_to_use": "Verify each disputed regime independently. If an option excludes an endpoint or assigns it a different outcome, require explicit support from the visible theorem or derivation; uniqueness, extremality, or separate proof treatment alone is insufficient. If a boundary is represented by an inclusive parametrized family, substitute the endpoint into the displayed formula and compare the resulting value and multiplicity with any separately stated boundary term. For dimension- or threshold-indexed equivalences, test exceptional base values separately from the positive or general regime. In a piecewise classification, apply a specialized branch at an endpoint only when its formula and theorem scope explicitly justify that endpoint; otherwise retain the endpoint in the stated fallback branch.",
+        "avoid": [
+          "Do not infer a different endpoint conclusion from uniqueness, extremality, or separate treatment alone.",
+          "Do not prefer a wider interval merely because it appears more complete.",
+          "Do not replace an inclusive endpoint by a separate boundary term without checking value and multiplicity.",
+          "Do not extrapolate a general family-boundary characterization across an exceptional base index."
+        ],
+        "stats": {
+          "n_use": 0,
+          "n_succ": 0,
+          "p_hat": null
+        },
+        "active": true,
+        "frozen": false
+      }
+    ],
+    "edges": [
+      {
+        "id": "E001",
+        "source": "M001",
+        "target": "M002",
+        "type": "prereq",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E002",
+        "source": "M003",
+        "target": "M002",
+        "type": "prereq",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E003",
+        "source": "M002",
+        "target": "M004",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E004",
+        "source": "M005",
+        "target": "M011",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E005",
+        "source": "M005",
+        "target": "M009",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E006",
+        "source": "M006",
+        "target": "M009",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E007",
+        "source": "M007",
+        "target": "M004",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E008",
+        "source": "M008",
+        "target": "M004",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E009",
+        "source": "M017",
+        "target": "M009",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E010",
+        "source": "M009",
+        "target": "M004",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E011",
+        "source": "M010",
+        "target": "M019",
+        "type": "prereq",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E012",
+        "source": "M018",
+        "target": "M019",
+        "type": "prereq",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E013",
+        "source": "M019",
+        "target": "M013",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E014",
+        "source": "M011",
+        "target": "M003",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E015",
+        "source": "M015",
+        "target": "M011",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E016",
+        "source": "M012",
+        "target": "M004",
+        "type": "prereq",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E017",
+        "source": "M013",
+        "target": "M004",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E018",
+        "source": "M016",
+        "target": "M020",
+        "type": "co_occur",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E019",
+        "source": "M020",
+        "target": "M021",
+        "type": "co_occur",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E020",
+        "source": "M016",
+        "target": "M004",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E021",
+        "source": "M020",
+        "target": "M004",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E022",
+        "source": "M021",
+        "target": "M004",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E023",
+        "source": "M004",
+        "target": "M014",
+        "type": "prereq",
+        "weight": "medium",
+        "rationale": "",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E024",
+        "source": "M012",
+        "target": "M022",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "MISSING_SKILL_FAMILY: M012 correctly recognized the connectedness, unboundedness, boundary regularity, mean-convexity, and disconnected-boundary state, which should activate this specialist geometric test. The successful sibling could rank options after establishing its domain-specific rigidity conclusion, whereas this case lacked the corresponding procedure needed to decide whether the curvature conclusion applies to one component or every arbitrary component.",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E025",
+        "source": "M004",
+        "target": "M023",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "M004 was active and correctly required comparison of all options, but the failed comparison needed a specialist once the observable alternatives differed by preservation of auxiliary structure. Activating this rule during M004 would reject the unsupported strengthening while leaving the successful sibling's existing option-comparison path unchanged.",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E026",
+        "source": "M004",
+        "target": "M024",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "While M004 was actively comparing nested distribution claims, the response stated that the refinement was not established without testing the available structural mechanism. This specialist should activate from that observable comparison state and improve M004 by supplying the missing fiberwise lifting test. Unlike the successful sibling's direct polynomial comparison, this case cannot be resolved by strength ranking alone.",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E027",
+        "source": "M012",
+        "target": "M025",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "After M012 matches hypotheses involving a connected family, a local identification, and rigidity assumptions, this specialist should activate to test whether a generic-locus construction is merely an intermediate proof step. The failed trace instead stated verbatim that \"option B gives only a connected open dense subset containing t1 while explicitly allowing exceptions, and options D and E assert an unsupported universal conclusion over the whole disc.\" The replacement decision is to check whether separatedness or continuation globalizes the local identification before accepting exceptions. T",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E028",
+        "source": "M004",
+        "target": "M026",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "M004 was active while the options visibly contrasted selected prime-local statements with an all-primes statement, but the response concluded that \"E asserts a stronger all-primes conclusion from \\((k,84)\\) than is justified\" without accounting for the generic-prime regime or combining it with the exceptional-prime cases. The replacement decision is to exhaust all prime regimes and test whether one shared invariant supplies every local criterion. No successful sibling was supplied, while the teacher theorem and sketch directly confirm that this case partition supports the all-primes conclusion",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E029",
+        "source": "M012",
+        "target": "M026",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "MISSING_SKILL_FAMILY: M012 correctly activated on the universal finite-abelian-group scope, but no existing node instructs the solver to resolve that scope through exhaustive structure-dependent constructions. The trace instead rejected stronger candidates because particular homomorphisms fail on some groups. No successful sibling was supplied, while the teacher reference identifies complementary torsion regimes as the missing reusable mechanism. M012 should activate this specialist when theorem matching exposes a universal algebraic family with structure-sensitive proof methods.",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E030",
+        "source": "M004",
+        "target": "M027",
+        "type": "enhance",
+        "weight": "strong",
+        "rationale": "The supporting failures all failed during M004 comparison at one of these observable distinctions.",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E031",
+        "source": "M012",
+        "target": "M028",
+        "type": "enhance",
+        "weight": "strong",
+        "rationale": "The supporting failures supply the three observable activation states.",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E032",
+        "source": "M016",
+        "target": "M029",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "M016 correctly required exact exponent comparison, but the trace had no reusable procedure for deriving the temporal power and therefore asserted an unsupported intrinsic factor. This specialist should activate from M016 when estimate options differ in temporal scaling. No successful sibling was supplied, but the teacher reference directly contradicts the inferred exponent without requiring a case-specific answer rule.",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E033",
+        "source": "M016",
+        "target": "M030",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "M016 activated a quantitative comparison state, but the trace immediately asserted an unsupported function-to-exponent assignment and then treated it as the comparison baseline. The teacher reference contradicts that assignment, while no successful sibling was supplied to support the student's path. This specialist should activate from M016 whenever several named quantities are paired with similar quantitative expressions, preventing association errors before exact option and meta-option comparison.",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E034",
+        "source": "M011",
+        "target": "M031",
+        "type": "enhance",
+        "weight": "strong",
+        "rationale": "The edge activates the the documented exception from the original scope-ranking node without changing M011's general semantics.",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E035",
+        "source": "M016",
+        "target": "M032",
+        "type": "enhance",
+        "weight": "strong",
+        "rationale": "The edge activates the narrow source-validation specialist for all five cited M016 failures without rewriting the high-exposure base node.",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E036",
+        "source": "M020",
+        "target": "M033",
+        "type": "enhance",
+        "weight": "medium",
+        "rationale": "The trace reached M020 while comparing correction terms, which is the observable state that should activate this specialist. Generic correction-term comparison could not determine which refinement was proved; the missing counting procedure would have prevented the unsupported specific coefficient. No successful sibling was supplied to support a different path.",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E037",
+        "source": "M003",
+        "target": "M034",
+        "type": "enhance",
+        "weight": "strong",
+        "rationale": "The edge keeps the specialist and its activation mechanism together and is supported by all four cited failures requiring the guarded refinements.",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E038",
+        "source": "M005",
+        "target": "M035",
+        "type": "enhance",
+        "weight": "strong",
+        "rationale": "The activation edge keeps the failure-supported specialist attached to the original quantifier rule and limits its use to the observable ambiguity demonstrated in the supporting failure.",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E039",
+        "source": "M008",
+        "target": "M036",
+        "type": "enhance",
+        "weight": "strong",
+        "rationale": "This activation edge keeps the specialist attached to the original overstatement detector and is directly supported by the cited failure case.",
+        "active": true,
+        "frozen": false
+      },
+      {
+        "id": "E040",
+        "source": "M013",
+        "target": "M037",
+        "type": "enhance",
+        "weight": "strong",
+        "rationale": "The activation edge is supported by all four failures, each of which attributes the missing boundary or exceptional-regime procedure to M013.",
+        "active": true,
+        "frozen": false
+      }
+    ],
+    "common_mistakes": []
+  }
+}

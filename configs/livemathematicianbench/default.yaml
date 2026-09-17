@@ -1,0 +1,30 @@
+_base_: ../_base_/default.yaml
+
+train:
+  train_size: 468
+
+env:
+  name: livemathematicianbench
+  skill_init: graphopt/envs/livemathematicianbench/initial_skill/best_graph.json
+  split_mode: split_dir
+  split_ratio: update_only_quadruples_with_independent_held_out_test
+  split_dir: data/livemathematicianbench
+  max_turns: 1
+  immutable_prompt_file: immutable_prompt.md
+  semantic_reasoning_trace: false
+  max_completion_tokens: 16384
+  exec_timeout: 300
+  workers: 64
+  openlux_workers: 2
+  openlux_request_timeout: 300
+  openlux_request_retries: 2
+  openlux_recovery_rounds: 1
+  openlux_recovery_backoff_seconds: 60
+  shuffle_choices: true
+  use_theorem: false
+  use_sketch: false
+  limit: 0
+  require_official_full_dataset: true
+  validate_dataset_assets: true
+  no_validation_split: true
+  no_test_split: false

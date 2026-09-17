@@ -1,0 +1,61 @@
+# Full SkillAA/GraphOpt hyperparameters for the fixed SkillAA configuration.
+train:
+  num_epochs: 3
+  train_size: 0
+  train_per_validation: 4
+  grouped_batch_gate: true
+  single_full_pool_input: true
+  batch_size_scope: train
+  accumulation: 1
+  shard_train_across_epochs: false
+  seed: 42
+
+gradient:
+  update_protocol: case_complete
+  node_support_threshold: 1
+  edge_support_threshold: 1
+  edge_merge_min_support: 1
+  delete_used_threshold: 4
+  edge_delete_used_threshold: 4
+  node_merge_top_k: 1
+  execution_reinforcement_threshold: 1
+  max_execution_child_candidates_per_epoch: 1
+  max_active_execution_children_per_parent: 4
+  execution_merge_evidence_cap: 64
+  delete_never_used_node: false
+  delete_never_used_edge: false
+  persist_proposal_pool: false
+  analyst_workers: 16
+  success_guard_workers: 16
+  positive_example_cap: 2
+  failure_example_cap: 3
+  failure_only: false
+
+optimizer:
+  learning_rate: 4
+  min_learning_rate: 2
+  lr_scheduler: constant
+  use_meta_skill: true
+
+evaluation:
+  experiment_mode: graphopt
+  ablation_mode: g_full
+  exclude_step_limit_failures: false
+  use_gate: true
+  selective_gate: true
+  use_train_tiebreak: true
+  use_big_gate_train_tiebreak: false
+  use_teacher_veto: true
+  max_big_gate_passes: 1
+  gate_metric: hard
+  gate_mixed_weight: 0.8
+  big_gate_allow_hard_tie: false
+  sel_env_num: 0
+  test_env_num: 0
+  eval_test: true
+  run_epoch_test: false
+  epoch_test_repeats: 1
+  run_component_ablation_tests: false
+  final_test_repeats: 1
+  test_repeat_seed_mode: fixed
+  test_only: false

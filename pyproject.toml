@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "skillaa"
+version = "1.0.0"
+description = "SkillAA graph-based skill attribution and optimization"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "openai>=1.0.0",
+  "PyYAML>=6.0",
+  "json_repair>=0.61.0",
+  "omegaconf>=2.3.0",
+  "openpyxl>=3.1.0",
+  "pandas>=2.0.0",
+  "pyarrow>=14.0.0",
+  "huggingface-hub>=0.25.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.4"]
+
+[tool.setuptools.packages.find]
+include = ["graphopt", "graphopt.*", "scripts"]
+
+[tool.setuptools.package-data]
+graphopt = ["prompts/*.md", "envs/**/*.md", "envs/**/*.json", "runtime_envs/**/*.md"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,1837 @@
+{
+  "schema_version": "skillaa-split-v1",
+  "protocol": "skillaa_update_quadruples_v1",
+  "dataset": "docvqa",
+  "source": {
+    "repository": "lmms-lab/DocVQA",
+    "revision": "539088ef8a8ada01ac8e2e6d4e372586748a265e"
+  },
+  "split_layout": [
+    "train",
+    "test"
+  ],
+  "counts": {
+    "train": 800,
+    "test": 200
+  },
+  "no_validation_split": true,
+  "source_train_and_validation_form_update_pool": true,
+  "held_out_test": true,
+  "test_used_for_grouping_training_or_gates": false,
+  "identity": {
+    "train_id_sha256": "6d7069735e1c4cd89118e7d75b0c36a35a055ba7d5d8f4b2307499d32ca1d32a",
+    "train_order_sha256": "5316ed750748579a4ff203972c378e5466b82a456a436672b39eb29247ceaa63",
+    "test_id_sha256": "977d91e82d2bae8cc022eb9b6a598d0ad4dd6527a0806e4604a44afea01aecbd",
+    "test_order_sha256": "efa798ad7b7ad663023ee5361c39a0aa68dd7a3c777514a528e569f7d0ed0ad5"
+  },
+  "training_group_policy": {
+    "description": "Fixed disjoint update-only quadruples. Held-out test IDs are absent from every group.",
+    "group_size": 4,
+    "update_per_group": 4,
+    "validation_per_group": 0,
+    "test_per_group": 0,
+    "group_count": 200,
+    "groups": [
+      {
+        "group_id": "docvqa-update-0000",
+        "train_ids": [
+          "40714",
+          "31079",
+          "62000",
+          "1012"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0001",
+        "train_ids": [
+          "1020",
+          "52144",
+          "54614",
+          "42332"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0002",
+        "train_ids": [
+          "11336",
+          "56575",
+          "47606",
+          "50802"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0003",
+        "train_ids": [
+          "51771",
+          "36960",
+          "64488",
+          "62096"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0004",
+        "train_ids": [
+          "1167",
+          "59708",
+          "55901",
+          "55340"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0005",
+        "train_ids": [
+          "1184",
+          "64866",
+          "64564",
+          "52459"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0006",
+        "train_ids": [
+          "12550",
+          "62349",
+          "60074",
+          "57550"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0007",
+        "train_ids": [
+          "62320",
+          "56401",
+          "58384",
+          "24511"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0008",
+        "train_ids": [
+          "46620",
+          "3839",
+          "31025",
+          "14994"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0009",
+        "train_ids": [
+          "60781",
+          "44962",
+          "47702",
+          "15039"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0010",
+        "train_ids": [
+          "60480",
+          "57527",
+          "61401",
+          "63524"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0011",
+        "train_ids": [
+          "15155",
+          "32994",
+          "32871",
+          "63753"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0012",
+        "train_ids": [
+          "18508",
+          "51220",
+          "44271",
+          "56977"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0013",
+        "train_ids": [
+          "15321",
+          "58788",
+          "1194",
+          "55127"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0014",
+        "train_ids": [
+          "62500",
+          "55399",
+          "63257",
+          "4948"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0015",
+        "train_ids": [
+          "56525",
+          "15133",
+          "16499",
+          "15753"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0016",
+        "train_ids": [
+          "56981",
+          "826",
+          "47423",
+          "5468"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0017",
+        "train_ids": [
+          "16339",
+          "65060",
+          "62357",
+          "39076"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0018",
+        "train_ids": [
+          "16429",
+          "58498",
+          "22511",
+          "63050"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0019",
+        "train_ids": [
+          "26167",
+          "59493",
+          "56283",
+          "45724"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0020",
+        "train_ids": [
+          "65381",
+          "64927",
+          "21070",
+          "16456"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0021",
+        "train_ids": [
+          "21064",
+          "47532",
+          "5651",
+          "16555"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0022",
+        "train_ids": [
+          "61290",
+          "234",
+          "5597",
+          "60139"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0023",
+        "train_ids": [
+          "61634",
+          "39049",
+          "3835",
+          "46635"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0024",
+        "train_ids": [
+          "32894",
+          "56446",
+          "63018",
+          "59822"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0025",
+        "train_ids": [
+          "49082",
+          "62389",
+          "50817",
+          "47734"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0026",
+        "train_ids": [
+          "9307",
+          "54990",
+          "6003",
+          "17140"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0027",
+        "train_ids": [
+          "1795",
+          "56788",
+          "21035",
+          "53730"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0028",
+        "train_ids": [
+          "18736",
+          "4956",
+          "56689",
+          "43779"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0029",
+        "train_ids": [
+          "60403",
+          "10265",
+          "51075",
+          "18828"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0030",
+        "train_ids": [
+          "8128",
+          "6360",
+          "64135",
+          "59856"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0031",
+        "train_ids": [
+          "5263",
+          "51617",
+          "56462",
+          "36929"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0032",
+        "train_ids": [
+          "59480",
+          "50939",
+          "59631",
+          "59636"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0033",
+        "train_ids": [
+          "65149",
+          "1985",
+          "59032",
+          "18975"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0034",
+        "train_ids": [
+          "50766",
+          "62920",
+          "17143",
+          "19093"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0035",
+        "train_ids": [
+          "52617",
+          "6948",
+          "56578",
+          "19162"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0036",
+        "train_ids": [
+          "19251",
+          "50774",
+          "36692",
+          "54974"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0037",
+        "train_ids": [
+          "53087",
+          "49181",
+          "60806",
+          "1964"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0038",
+        "train_ids": [
+          "2007",
+          "60912",
+          "62771",
+          "47587"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0039",
+        "train_ids": [
+          "63664",
+          "50117",
+          "21126",
+          "21303"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0040",
+        "train_ids": [
+          "2146",
+          "64288",
+          "56889",
+          "50800"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0041",
+        "train_ids": [
+          "21520",
+          "64616",
+          "49135",
+          "60625"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0042",
+        "train_ids": [
+          "62829",
+          "45139",
+          "63809",
+          "43131"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0043",
+        "train_ids": [
+          "2193",
+          "782",
+          "296",
+          "57817"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0044",
+        "train_ids": [
+          "55239",
+          "56298",
+          "47066",
+          "56507"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0045",
+        "train_ids": [
+          "59443",
+          "6822",
+          "60968",
+          "22304"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0046",
+        "train_ids": [
+          "22311",
+          "25720",
+          "59921",
+          "42142"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0047",
+        "train_ids": [
+          "64296",
+          "61642",
+          "674",
+          "224"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0048",
+        "train_ids": [
+          "47445",
+          "61274",
+          "19071",
+          "5412"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0049",
+        "train_ids": [
+          "23830",
+          "450",
+          "50528",
+          "43739"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0050",
+        "train_ids": [
+          "24426",
+          "49292",
+          "59353",
+          "59564"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0051",
+        "train_ids": [
+          "58334",
+          "37243",
+          "10536",
+          "64484"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0052",
+        "train_ids": [
+          "24582",
+          "18610",
+          "52538",
+          "39132"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0053",
+        "train_ids": [
+          "57450",
+          "36286",
+          "64660",
+          "26430"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0054",
+        "train_ids": [
+          "54962",
+          "57307",
+          "62860",
+          "26590"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0055",
+        "train_ids": [
+          "59996",
+          "792",
+          "58664",
+          "61125"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0056",
+        "train_ids": [
+          "63532",
+          "25789",
+          "51643",
+          "26926"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0057",
+        "train_ids": [
+          "64741",
+          "54458",
+          "50861",
+          "51586"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0058",
+        "train_ids": [
+          "300",
+          "3844",
+          "46513",
+          "47045"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0059",
+        "train_ids": [
+          "7013",
+          "60815",
+          "16831",
+          "3044"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0060",
+        "train_ids": [
+          "45457",
+          "867",
+          "40585",
+          "30443"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0061",
+        "train_ids": [
+          "51786",
+          "18968",
+          "50780",
+          "56423"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0062",
+        "train_ids": [
+          "64910",
+          "57201",
+          "56400",
+          "46126"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0063",
+        "train_ids": [
+          "30802",
+          "45068",
+          "59882",
+          "49113"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0064",
+        "train_ids": [
+          "3135",
+          "56301",
+          "56885",
+          "59845"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0065",
+        "train_ids": [
+          "58830",
+          "51779",
+          "18749",
+          "63769"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0066",
+        "train_ids": [
+          "5558",
+          "61934",
+          "45009",
+          "36894"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0067",
+        "train_ids": [
+          "51092",
+          "25712",
+          "25730",
+          "57882"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0068",
+        "train_ids": [
+          "37421",
+          "63770",
+          "62972",
+          "5445"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0069",
+        "train_ids": [
+          "65420",
+          "28308",
+          "36853",
+          "32882"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0070",
+        "train_ids": [
+          "47931",
+          "59991",
+          "59942",
+          "41729"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0071",
+        "train_ids": [
+          "32949",
+          "63758",
+          "46501",
+          "56937"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0072",
+        "train_ids": [
+          "33158",
+          "51324",
+          "52485",
+          "5193"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0073",
+        "train_ids": [
+          "348",
+          "45690",
+          "57733",
+          "57977"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0074",
+        "train_ids": [
+          "50536",
+          "55371",
+          "58029",
+          "36495"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0075",
+        "train_ids": [
+          "432",
+          "7236",
+          "55095",
+          "36594"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0076",
+        "train_ids": [
+          "36709",
+          "47545",
+          "33009",
+          "43764"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0077",
+        "train_ids": [
+          "5373",
+          "65314",
+          "38997",
+          "37016"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0078",
+        "train_ids": [
+          "37227",
+          "63711",
+          "64752",
+          "4527"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0079",
+        "train_ids": [
+          "60998",
+          "63162",
+          "61275",
+          "37304"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0080",
+        "train_ids": [
+          "61775",
+          "1890",
+          "56905",
+          "51241"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0081",
+        "train_ids": [
+          "37367",
+          "59509",
+          "9845",
+          "52559"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0082",
+        "train_ids": [
+          "37666",
+          "18811",
+          "50851",
+          "47584"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0083",
+        "train_ids": [
+          "39863",
+          "5437",
+          "2209",
+          "65185"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0084",
+        "train_ids": [
+          "407",
+          "47753",
+          "1032",
+          "58515"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0085",
+        "train_ids": [
+          "4091",
+          "50880",
+          "41750",
+          "47517"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0086",
+        "train_ids": [
+          "41449",
+          "53605",
+          "65024",
+          "5520"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0087",
+        "train_ids": [
+          "45149",
+          "13613",
+          "21213",
+          "55442"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0088",
+        "train_ids": [
+          "57212",
+          "59927",
+          "59624",
+          "42105"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0089",
+        "train_ids": [
+          "42167",
+          "58684",
+          "25686",
+          "43780"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0090",
+        "train_ids": [
+          "64885",
+          "40799",
+          "32890",
+          "42304"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0091",
+        "train_ids": [
+          "58299",
+          "49146",
+          "788",
+          "43064"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0092",
+        "train_ids": [
+          "43072",
+          "55284",
+          "55942",
+          "53989"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0093",
+        "train_ids": [
+          "56606",
+          "57533",
+          "51597",
+          "43111"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0094",
+        "train_ids": [
+          "5488",
+          "45827",
+          "46431",
+          "43164"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0095",
+        "train_ids": [
+          "46230",
+          "1841",
+          "53696",
+          "56075"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0096",
+        "train_ids": [
+          "47974",
+          "49461",
+          "58692",
+          "58782"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0097",
+        "train_ids": [
+          "56310",
+          "65058",
+          "65404",
+          "56375"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0098",
+        "train_ids": [
+          "58646",
+          "383",
+          "56529",
+          "57514"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0099",
+        "train_ids": [
+          "58519",
+          "304",
+          "46457",
+          "43803"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0100",
+        "train_ids": [
+          "44136",
+          "61167",
+          "47708",
+          "47992"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0101",
+        "train_ids": [
+          "58021",
+          "60431",
+          "50321",
+          "55116"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0102",
+        "train_ids": [
+          "44831",
+          "57524",
+          "57543",
+          "60596"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0103",
+        "train_ids": [
+          "45148",
+          "52155",
+          "64634",
+          "61268"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0104",
+        "train_ids": [
+          "45410",
+          "50879",
+          "56817",
+          "57123"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0105",
+        "train_ids": [
+          "5962",
+          "57246",
+          "57781",
+          "45468"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0106",
+        "train_ids": [
+          "57903",
+          "53582",
+          "8570",
+          "457"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0107",
+        "train_ids": [
+          "63764",
+          "57184",
+          "58544",
+          "45792"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0108",
+        "train_ids": [
+          "63699",
+          "57807",
+          "53474",
+          "45798"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0109",
+        "train_ids": [
+          "64552",
+          "63692",
+          "50865",
+          "58404"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0110",
+        "train_ids": [
+          "59843",
+          "55367",
+          "51329",
+          "46215"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0111",
+        "train_ids": [
+          "46672",
+          "33005",
+          "57955",
+          "54860"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0112",
+        "train_ids": [
+          "56852",
+          "64204",
+          "43346",
+          "46369"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0113",
+        "train_ids": [
+          "51693",
+          "57276",
+          "59411",
+          "46414"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0114",
+        "train_ids": [
+          "6978",
+          "43082",
+          "19241",
+          "46446"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0115",
+        "train_ids": [
+          "46580",
+          "60903",
+          "64768",
+          "63113"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0116",
+        "train_ids": [
+          "46719",
+          "1930",
+          "57933",
+          "63033"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0117",
+        "train_ids": [
+          "46737",
+          "64929",
+          "50503",
+          "55026"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0118",
+        "train_ids": [
+          "58879",
+          "266",
+          "46331",
+          "5178"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0119",
+        "train_ids": [
+          "5855",
+          "5615",
+          "59433",
+          "51741"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0120",
+        "train_ids": [
+          "57226",
+          "60511",
+          "5593",
+          "64139"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0121",
+        "train_ids": [
+          "476",
+          "37191",
+          "57066",
+          "59444"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0122",
+        "train_ids": [
+          "50998",
+          "50518",
+          "59376",
+          "47815"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0123",
+        "train_ids": [
+          "56388",
+          "1979",
+          "41690",
+          "64934"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0124",
+        "train_ids": [
+          "60724",
+          "50717",
+          "65201",
+          "47902"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0125",
+        "train_ids": [
+          "56473",
+          "51021",
+          "49400",
+          "56034"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0126",
+        "train_ids": [
+          "58319",
+          "60388",
+          "358",
+          "55257"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0127",
+        "train_ids": [
+          "49322",
+          "61300",
+          "59481",
+          "49234"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0128",
+        "train_ids": [
+          "64971",
+          "63200",
+          "10293",
+          "63243"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0129",
+        "train_ids": [
+          "62951",
+          "65421",
+          "49437",
+          "55080"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0130",
+        "train_ids": [
+          "57302",
+          "53438",
+          "45823",
+          "61764"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0131",
+        "train_ids": [
+          "63861",
+          "58530",
+          "19216",
+          "57989"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0132",
+        "train_ids": [
+          "61559",
+          "61389",
+          "62118",
+          "60743"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0133",
+        "train_ids": [
+          "50290",
+          "57195",
+          "64208",
+          "6064"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0134",
+        "train_ids": [
+          "50309",
+          "48178",
+          "3122",
+          "50724"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0135",
+        "train_ids": [
+          "51216",
+          "1888",
+          "53538",
+          "59805"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0136",
+        "train_ids": [
+          "50502",
+          "61107",
+          "55132",
+          "59608"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0137",
+        "train_ids": [
+          "58007",
+          "43468",
+          "45683",
+          "50529"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0138",
+        "train_ids": [
+          "9477",
+          "42225",
+          "5675",
+          "50791"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0139",
+        "train_ids": [
+          "56616",
+          "53813",
+          "37650",
+          "60634"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0140",
+        "train_ids": [
+          "62823",
+          "34140",
+          "60880",
+          "51132"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0141",
+        "train_ids": [
+          "54162",
+          "58587",
+          "52442",
+          "55034"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0142",
+        "train_ids": [
+          "64229",
+          "55327",
+          "63178",
+          "51359"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0143",
+        "train_ids": [
+          "5666",
+          "57083",
+          "650",
+          "51360"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0144",
+        "train_ids": [
+          "52165",
+          "50907",
+          "27859",
+          "58108"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0145",
+        "train_ids": [
+          "60935",
+          "46560",
+          "54933",
+          "51679"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0146",
+        "train_ids": [
+          "57791",
+          "52375",
+          "59344",
+          "5177"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0147",
+        "train_ids": [
+          "58687",
+          "55300",
+          "56848",
+          "5978"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0148",
+        "train_ids": [
+          "55396",
+          "62477",
+          "58371",
+          "52260"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0149",
+        "train_ids": [
+          "52290",
+          "62133",
+          "59915",
+          "64254"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0150",
+        "train_ids": [
+          "60437",
+          "60402",
+          "49366",
+          "52302"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0151",
+        "train_ids": [
+          "52308",
+          "58842",
+          "2191",
+          "5494"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0152",
+        "train_ids": [
+          "58809",
+          "61436",
+          "5820",
+          "52522"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0153",
+        "train_ids": [
+          "56642",
+          "56639",
+          "6803",
+          "56439"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0154",
+        "train_ids": [
+          "53598",
+          "56457",
+          "38876",
+          "62846"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0155",
+        "train_ids": [
+          "53969",
+          "25732",
+          "63856",
+          "58425"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0156",
+        "train_ids": [
+          "58893",
+          "50468",
+          "55119",
+          "60500"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0157",
+        "train_ids": [
+          "63877",
+          "50762",
+          "375",
+          "61509"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0158",
+        "train_ids": [
+          "55459",
+          "65341",
+          "55416",
+          "55104"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0159",
+        "train_ids": [
+          "55108",
+          "56825",
+          "58770",
+          "58482"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0160",
+        "train_ids": [
+          "58748",
+          "61603",
+          "57061",
+          "55149"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0161",
+        "train_ids": [
+          "63293",
+          "63536",
+          "65229",
+          "63680"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0162",
+        "train_ids": [
+          "63595",
+          "64498",
+          "55208",
+          "58270"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0163",
+        "train_ids": [
+          "58727",
+          "62408",
+          "50450",
+          "64215"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0164",
+        "train_ids": [
+          "55466",
+          "62528",
+          "5566",
+          "58444"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0165",
+        "train_ids": [
+          "5714",
+          "5778",
+          "41829",
+          "5586"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0166",
+        "train_ids": [
+          "61546",
+          "61355",
+          "58546",
+          "55925"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0167",
+        "train_ids": [
+          "60032",
+          "56080",
+          "59819",
+          "62933"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0168",
+        "train_ids": [
+          "57349",
+          "54312",
+          "58501",
+          "56049"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0169",
+        "train_ids": [
+          "63488",
+          "1891",
+          "65215",
+          "56064"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0170",
+        "train_ids": [
+          "56270",
+          "1958",
+          "46281",
+          "7019"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0171",
+        "train_ids": [
+          "56371",
+          "56393",
+          "56084",
+          "56360"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0172",
+        "train_ids": [
+          "6983",
+          "15350",
+          "64369",
+          "56436"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0173",
+        "train_ids": [
+          "58379",
+          "63718",
+          "49109",
+          "62944"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0174",
+        "train_ids": [
+          "56785",
+          "31020",
+          "283",
+          "61370"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0175",
+        "train_ids": [
+          "59570",
+          "15003",
+          "9295",
+          "56804"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0176",
+        "train_ids": [
+          "56839",
+          "54259",
+          "1749",
+          "57164"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0177",
+        "train_ids": [
+          "58804",
+          "25707",
+          "7015",
+          "57029"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0178",
+        "train_ids": [
+          "57410",
+          "61789",
+          "63147",
+          "59428"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0179",
+        "train_ids": [
+          "613",
+          "4471",
+          "61757",
+          "57253"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0180",
+        "train_ids": [
+          "57315",
+          "56345",
+          "58347",
+          "64466"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0181",
+        "train_ids": [
+          "57395",
+          "62282",
+          "61785",
+          "60795"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0182",
+        "train_ids": [
+          "60791",
+          "64707",
+          "58309",
+          "63867"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0183",
+        "train_ids": [
+          "60463",
+          "5477",
+          "3847",
+          "58024"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0184",
+        "train_ids": [
+          "9962",
+          "56274",
+          "50848",
+          "9371"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0185",
+        "train_ids": [
+          "59292",
+          "63568",
+          "57402",
+          "64939"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0186",
+        "train_ids": [
+          "64149",
+          "59471",
+          "45773",
+          "61581"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0187",
+        "train_ids": [
+          "62098",
+          "58391",
+          "59877",
+          "64831"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0188",
+        "train_ids": [
+          "59681",
+          "62517",
+          "47766",
+          "63137"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0189",
+        "train_ids": [
+          "59684",
+          "1983",
+          "56364",
+          "64899"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0190",
+        "train_ids": [
+          "63046",
+          "43599",
+          "25386",
+          "59846"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0191",
+        "train_ids": [
+          "64672",
+          "5164",
+          "54910",
+          "64141"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0192",
+        "train_ids": [
+          "7575",
+          "59381",
+          "26304",
+          "60104"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0193",
+        "train_ids": [
+          "65120",
+          "45090",
+          "58560",
+          "63863"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0194",
+        "train_ids": [
+          "65398",
+          "6713",
+          "6027",
+          "63183"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0195",
+        "train_ids": [
+          "61159",
+          "5300",
+          "893",
+          "63789"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0196",
+        "train_ids": [
+          "63843",
+          "60813",
+          "50966",
+          "65361"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0197",
+        "train_ids": [
+          "64619",
+          "38045",
+          "64610",
+          "64689"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0198",
+        "train_ids": [
+          "64496",
+          "58294",
+          "37489",
+          "64548"
+        ]
+      },
+      {
+        "group_id": "docvqa-update-0199",
+        "train_ids": [
+          "64683",
+          "63812",
+          "59965",
+          "64588"
+        ]
+      }
+    ]
+  }
+}
