@@ -1,1 +1,1 @@
-"""SkillAA command-line helpers."""
+"""GraphSkillAA command-line helpers."""

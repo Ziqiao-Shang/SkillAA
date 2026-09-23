@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""SkillAA training entry with SkillGraph state.
+"""GraphSkillAA training entry with SkillGraph state.
 
 Usage
 -----
@@ -106,7 +106,7 @@ def dry_rollout(skill_text: str, split: str, cfg: dict):
 
 
 def parse_args(argv=None) -> argparse.Namespace:
-    p = argparse.ArgumentParser(description="SkillAA runner (fixed gpt-5.6-sol pairing)")
+    p = argparse.ArgumentParser(description="GraphSkillAA runner (fixed gpt-5.6-sol pairing)")
     p.add_argument("--config", type=str, default="", help="YAML config for one of the three supported benchmarks")
     p.add_argument("--cfg-options", nargs="+", default=[], help="section.key=value overrides")
     p.add_argument(
@@ -246,7 +246,7 @@ def main(argv=None) -> None:
     student = str(cfg.get("student_model_base") or "")
     if teacher != FIXED_MODEL or student != FIXED_MODEL:
         raise ValueError(
-            "SkillAA requires teacher=student="
+            "GraphSkillAA requires teacher=student="
             f"{FIXED_MODEL}; resolved teacher={teacher!r}, student={student!r}"
         )
 
@@ -284,7 +284,7 @@ def main(argv=None) -> None:
     reflect_mode = args.reflect_mode or ("template" if args.dry_run else "teacher")
 
     print(f"\n{'='*60}")
-    print("  SkillAA — fixed model configuration")
+    print("  GraphSkillAA — fixed model configuration")
     print(f"{'='*60}")
     print(f"  config:         {config_path}")
     print(f"  skill_init:     {cfg.get('skill_init') or cfg.get('graph_init')}")

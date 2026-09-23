@@ -1,4 +1,4 @@
-"""SkillAA runtime: configuration, model setup, and benchmark adapters."""
+"""GraphSkillAA runtime: configuration, model setup, and benchmark adapters."""
 
 from __future__ import annotations
 
@@ -327,7 +327,7 @@ def _preflight_official_manifest(env_name: str, cfg: dict[str, Any]) -> None:
             "adapter/model setup was not started. Run "
             "scripts/prepare_data.py --dataset all first."
         ) from exc
-    if manifest.get("protocol") == "skillaa_update_quadruples_v1":
+    if manifest.get("protocol") == "graphskillaa_update_quadruples_v1":
         if (
             manifest.get("split_layout") != ["train", "test"]
             or manifest.get("no_validation_split") is not True
@@ -338,7 +338,7 @@ def _preflight_official_manifest(env_name: str, cfg: dict[str, Any]) -> None:
                 f"{env_name} final dataset must contain train and held-out test only"
             )
         return
-    if manifest.get("protocol") == "skillaa_train_validation":
+    if manifest.get("protocol") == "graphskillaa_train_validation":
         if (
             manifest.get("split_layout") != ["train", "val"]
             or manifest.get("no_test_split") is not True
@@ -494,11 +494,11 @@ def _validate_static_benchmark_data(adapter, env_name: str, cfg: dict[str, Any])
         json.loads(manifest_path.read_text(encoding="utf-8"))
         if manifest_path.is_file() else {}
     )
-    if manifest.get("protocol") == "skillaa_update_quadruples_v1":
+    if manifest.get("protocol") == "graphskillaa_update_quadruples_v1":
         from graphopt.runtime_envs.train_test_split import validate_train_test_dataset
         validate_train_test_dataset(adapter, env_name, split_dir, manifest)
         return
-    if manifest.get("protocol") == "skillaa_train_validation":
+    if manifest.get("protocol") == "graphskillaa_train_validation":
         _validate_train_validation_dataset(adapter, env_name, split_dir, manifest)
         return
     if env_name == "docvqa":
@@ -863,7 +863,7 @@ def _validate_static_benchmark_data(adapter, env_name: str, cfg: dict[str, Any])
 def build_env_adapter(cfg: dict[str, Any]):
     """Instantiate the configured benchmark adapter.
 
-    Active benchmarks reuse SkillAA's authoritative rollout and evaluator
+    Active benchmarks reuse GraphSkillAA's authoritative rollout and evaluator
     implementations so hard/soft scores do not drift.
     """
     env_name = str(cfg.get("env_name") or cfg.get("env") or "searchqa").strip().lower()

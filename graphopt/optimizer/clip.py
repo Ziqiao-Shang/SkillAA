@@ -1,4 +1,4 @@
-"""Clip / rank graph edits — mirrors ``skillaa/optimizer/clip.py``.
+"""Clip / rank graph edits — mirrors ``graphskillaa/optimizer/clip.py``.
 
 Supports:
 - total operation budget L (``max_ops`` / ``edit_budget`` / ``learning_rate``)
@@ -23,7 +23,7 @@ def clip_budget(
     max_edge_edits: int | None = None,
     chat_fn=None,
 ) -> GraphPatch:
-    """Keep at most ``max_ops`` edits (SkillAA ``rank_and_select`` analogue)."""
+    """Keep at most ``max_ops`` edits (GraphSkillAA ``rank_and_select`` analogue)."""
     nodes = [e for e in patch.edits if e.is_node_op]
     edges = [e for e in patch.edits if e.is_edge_op]
     total = len(patch.edits)
@@ -120,6 +120,6 @@ def _llm_rank(
         return None
 
 
-# SkillAA-facing aliases
+# GraphSkillAA-facing aliases
 clip_patch = clip_budget
 rank_and_select = clip_budget

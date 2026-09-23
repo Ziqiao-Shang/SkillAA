@@ -1,4 +1,4 @@
-"""Public configuration helpers for SkillAA."""
+"""Public configuration helpers for GraphSkillAA."""
 
 from __future__ import annotations
 

@@ -1,4 +1,4 @@
-"""GraphOpt trainer: SkillAA loop with SkillGraph G_t instead of skill document S_t.
+"""GraphOpt trainer: GraphSkillAA loop with SkillGraph G_t instead of skill document S_t.
 
 Only the trainable state + edit space change. Rollout / splits / gate / meta /
 optimizer model are configured by this package.
@@ -2550,7 +2550,7 @@ class Trainer:
             self.max_node = int(self.max_node)
         if self.max_edge is not None:
             self.max_edge = int(self.max_edge)
-        # SkillAA paper-faithful evaluation selects graphs by hard task
+        # GraphSkillAA paper-faithful evaluation selects graphs by hard task
         # success. Soft remains an audited diagnostic unless explicitly chosen.
         self.gate_metric = str(self.cfg.get("gate_metric") or "hard").strip().lower()
         if self.gate_metric not in {"hard", "soft", "mixed"}:
@@ -2568,7 +2568,7 @@ class Trainer:
         )
         self.selective_gate = bool(self.cfg.get("selective_gate", True))
         self.ablation_mode = str(self.cfg.get("ablation_mode") or "custom").strip().lower()
-        # SkillAA is single-component. Tuple fields are: updater, online
+        # GraphSkillAA is single-component. Tuple fields are: updater, online
         # small Gate, epoch complete-candidate big Gate, per-edit small-Gate selection,
         # same-group rightcase context, train tie-break, teacher veto.
         # The formal full method is g_full and is reported once.
@@ -2668,11 +2668,11 @@ class Trainer:
             self.cfg.get("experiment_mode") or "graphopt"
         ).strip().lower()
         if self.experiment_mode not in {
-            "graphopt", "graphopt_best", "no_skill", "initial_skill", "skillaa_md"
+            "graphopt", "graphopt_best", "no_skill", "initial_skill", "graphskillaa_md"
         }:
             raise ValueError(
                 "experiment_mode must be one of: graphopt, graphopt_best, "
-                "no_skill, initial_skill, skillaa_md"
+                "no_skill, initial_skill, graphskillaa_md"
             )
         self.test_only = bool(self.cfg.get("test_only", False))
         if self.test_only and self.experiment_mode == "graphopt":
@@ -2769,7 +2769,7 @@ class Trainer:
                     )
         self.skill_markdown_path: Path | None = None
         self.skill_markdown = ""
-        if self.experiment_mode == "skillaa_md":
+        if self.experiment_mode == "graphskillaa_md":
             raw_path = str(self.cfg.get("skill_markdown_path") or "").strip()
             environment = str(
                 self.cfg.get("env_name") or self.cfg.get("env") or "searchqa"
@@ -2781,11 +2781,11 @@ class Trainer:
                 / "envs" / environment / "skills" / "gpt5.5_skill.md"
             )
             if not path.is_file():
-                raise FileNotFoundError(f"skillaa_md file not found: {path}")
+                raise FileNotFoundError(f"graphskillaa_md file not found: {path}")
             self.skill_markdown_path = path
             self.skill_markdown = path.read_text(encoding="utf-8")
             if not self.skill_markdown.strip():
-                raise ValueError(f"skillaa_md file is empty: {path}")
+                raise ValueError(f"graphskillaa_md file is empty: {path}")
         self.accumulation = max(1, int(self.cfg.get("accumulation") or 1))
         self.grouped_batch_gate = bool(self.cfg.get("grouped_batch_gate", False))
         self.batch_size = max(1, int(self.cfg.get("batch_size") or 48))
@@ -3145,7 +3145,7 @@ class Trainer:
         del env, results
         if self.experiment_mode == "no_skill":
             return "", []
-        if self.experiment_mode == "skillaa_md":
+        if self.experiment_mode == "graphskillaa_md":
             return self.skill_markdown, []
         environment = str(self.cfg.get("env_name") or self.cfg.get("env") or "searchqa")
         return (
@@ -3159,12 +3159,12 @@ class Trainer:
     def _run_evaluation_only(self) -> dict[str, Any]:
         """Evaluate a baseline without training, teacher calls, mutation, or Gate."""
         mode = self.experiment_mode
-        if mode not in {"graphopt_best", "no_skill", "initial_skill", "skillaa_md"}:
+        if mode not in {"graphopt_best", "no_skill", "initial_skill", "graphskillaa_md"}:
             raise RuntimeError(f"evaluation-only mode is invalid: {mode!r}")
 
         selection_baseline = None
         if mode == "initial_skill" and not self.test_only:
-            # Produce the one exact G0 valid_seen rollout that SkillAA methods
+            # Produce the one exact G0 valid_seen rollout that GraphSkillAA methods
             # may reuse fail-closed. It is an initialization measurement, not
             # training and not a Gate decision.
             self._baseline()
@@ -7215,7 +7215,7 @@ class Trainer:
 
     def run(self) -> dict[str, Any]:
         if self.experiment_mode in {
-            "graphopt_best", "no_skill", "initial_skill", "skillaa_md"
+            "graphopt_best", "no_skill", "initial_skill", "graphskillaa_md"
         }:
             return self._run_evaluation_only()
 

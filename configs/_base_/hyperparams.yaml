@@ -1,4 +1,4 @@
-# Full SkillAA/GraphOpt hyperparameters for the fixed SkillAA configuration.
+# Full GraphSkillAA/GraphOpt hyperparameters for the fixed GraphSkillAA configuration.
 train:
   num_epochs: 3
   train_size: 0

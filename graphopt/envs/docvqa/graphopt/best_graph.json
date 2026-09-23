@@ -318,7 +318,7 @@
       },
       {
         "id": "D017",
-        "title": "Non-Unique SkillAAssociation Resolver",
+        "title": "Non-Unique Skill Association Resolver",
         "section": "general_principles",
         "category": "learned",
         "node_type": "rule",

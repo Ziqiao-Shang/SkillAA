@@ -1,4 +1,4 @@
-"""SkillAA LiveMath adapter with OpenLux rollout isolation."""
+"""GraphSkillAA LiveMath adapter with OpenLux rollout isolation."""
 
 from __future__ import annotations
 

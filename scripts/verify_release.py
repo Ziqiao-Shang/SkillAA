@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Offline integrity checks for the SkillAA project."""
+"""Offline integrity checks for the GraphSkillAA project."""
 
 from __future__ import annotations
 
@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def main() -> None:
     subprocess.run(
-        [sys.executable, str(ROOT / "scripts" / "run_skillaa.py"), "--dataset", "all", "--seed", "all", "--check-manifests"],
+        [sys.executable, str(ROOT / "scripts" / "run_graphskillaa.py"), "--dataset", "all", "--seed", "all", "--check-manifests"],
         cwd=ROOT,
         check=True,
     )
@@ -22,7 +22,7 @@ def main() -> None:
         ROOT / "graphopt" / "envs" / "alfworld",
     ]
     forbidden_paths.extend(ROOT.glob("graphopt/envs/*/no_skill"))
-    forbidden_paths.extend(ROOT.glob("graphopt/envs/*/skillaa_md"))
+    forbidden_paths.extend(ROOT.glob("graphopt/envs/*/graphskillaa_md"))
     present = [str(path.relative_to(ROOT)) for path in forbidden_paths if path.exists()]
     if present:
         raise SystemExit("forbidden private/out-of-scope paths: " + ", ".join(present))

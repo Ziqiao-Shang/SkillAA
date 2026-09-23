@@ -1,6 +1,6 @@
-"""GraphOpt: SkillAA-style optimization over a SkillGraph state.
+"""GraphOpt: GraphSkillAA-style optimization over a SkillGraph state.
 
-Pipeline stages (mirrors SkillAA):
+Pipeline stages (mirrors GraphSkillAA):
   1. Rollout   — execute episodes with rendered subgraph skill text
   2. Reflect   — analyze trajectories, generate graph-edit patches
   3. Aggregate — merge patches

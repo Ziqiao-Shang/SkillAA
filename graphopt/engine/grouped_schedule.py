@@ -1,6 +1,6 @@
 """Deterministic fixed-group scheduling for GraphOpt.
 
-Active SkillAA datasets preserve explicit update-only quadruples. The scheduler
+Active GraphSkillAA datasets preserve explicit update-only quadruples. The scheduler
 places all four members in ``train_ids`` and keeps ``val_ids`` empty. Held-out
 test examples are absent from this mapping and never enter training or either
 Gate. No update case is duplicated or silently discarded.
@@ -116,7 +116,7 @@ def _explicit_groups(split_dir: Path) -> list[TrainValidationGroup]:
         return []
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     protocol = str(manifest.get("protocol") or "")
-    if protocol != "skillaa_update_quadruples_v1":
+    if protocol != "graphskillaa_update_quadruples_v1":
         return []
     active_policy = manifest.get("training_group_policy") or {}
     active_records = active_policy.get("groups") or []

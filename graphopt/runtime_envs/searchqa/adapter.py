@@ -1,4 +1,4 @@
-"""SkillAA SearchQA adapter with OpenLux rollout isolation."""
+"""GraphSkillAA SearchQA adapter with OpenLux rollout isolation."""
 
 from __future__ import annotations
 

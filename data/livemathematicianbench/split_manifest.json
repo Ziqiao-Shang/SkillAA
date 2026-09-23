@@ -1,6 +1,6 @@
 {
-  "schema_version": "skillaa-split-v1",
-  "protocol": "skillaa_update_quadruples_v1",
+  "schema_version": "graphskillaa-split-v1",
+  "protocol": "graphskillaa_update_quadruples_v1",
   "dataset": "livemathematicianbench",
   "source": {
     "repository": "LiveMathematicianBench/LiveMathematicianBench",

@@ -1,4 +1,4 @@
-"""SkillAA DocVQA adapter with OpenLux rollout isolation."""
+"""GraphSkillAA DocVQA adapter with OpenLux rollout isolation."""
 
 from __future__ import annotations
 
@@ -109,7 +109,7 @@ class DocVQAAdapter(EnvAdapter):
         self.dataloader.setup(cfg)
         repo_root = Path(__file__).resolve().parents[3]
         archived_images = (
-            repo_root / "outputs" / "data_archive" / "skillaa_source_snapshot"
+            repo_root / "outputs" / "data_archive" / "graphskillaa_source_snapshot"
             / "docvqa_images"
         )
         active_images = repo_root / "data" / "docvqa" / "images"

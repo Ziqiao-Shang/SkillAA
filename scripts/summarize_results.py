@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Aggregate the three independent SkillAA seeds as mean ± half-range."""
+"""Aggregate the three independent GraphSkillAA seeds as mean ± half-range."""
 
 from __future__ import annotations
 
@@ -17,7 +17,7 @@ def percent(value: float) -> float:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--output-root", type=Path, default=Path("outputs/skillaa"))
+    parser.add_argument("--output-root", type=Path, default=Path("outputs/graphskillaa"))
     args = parser.parse_args()
     print("| Benchmark | seed 42 | seed 43 | seed 44 | Mean ± half-range |")
     print("|---|---:|---:|---:|---:|")

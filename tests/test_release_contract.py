@@ -5,7 +5,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from scripts.run_skillaa import DATASETS, FIXED_MODEL, SEEDS, build_command, validate_manifest
+from scripts.run_graphskillaa import DATASETS, FIXED_MODEL, SEEDS, build_command, validate_manifest
 
 ROOT = Path(__file__).resolve().parents[1]
 

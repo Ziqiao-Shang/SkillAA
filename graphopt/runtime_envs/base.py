@@ -1,4 +1,4 @@
-"""Base interface for SkillAA benchmark adapters."""
+"""Base interface for GraphSkillAA benchmark adapters."""
 
 from __future__ import annotations
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Download pinned benchmark snapshots and materialize the configured SkillAA IDs."""
+"""Download pinned benchmark snapshots and materialize the configured GraphSkillAA IDs."""
 
 from __future__ import annotations
 
@@ -19,7 +19,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-from scripts.run_skillaa import DATASETS, ROOT, validate_data
+from scripts.run_graphskillaa import DATASETS, ROOT, validate_data
 
 REVISIONS = {
     "searchqa": "c1a979068ba118d85467179b704031d113d689cc",

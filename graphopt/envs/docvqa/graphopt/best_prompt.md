@@ -17,7 +17,7 @@ Before the final answer, write exactly one plain-text graph execution record ins
 
 Do not cite a node or edge that was not actually applied. Do not include hidden token-level reasoning, confidence theater, graph notes, ungrounded image coordinates, tool logs, question IDs, or the reference answer.
 
-Each node below is one reusable part of the bundled SkillAA skill. `prereq` edges give required order; `enhance` edges are optional checks whose trigger must hold. Edge strength is priority, not evidence.
+Each node below is one reusable part of the bundled GraphSkillAA skill. `prereq` edges give required order; `enhance` edges are optional checks whose trigger must hold. Edge strength is priority, not evidence.
 
 Output exactly these three blocks in this order and no other text:
 
@@ -147,7 +147,7 @@ Return the complete requested time expression with the trailing dash retained as
 - Do not treat report authorship, preparation, committee membership, collaboration, contribution, or cooperation as title ownership without a visible ownership association.
 - Do not expand an abbreviated name unless a visible role-labeled field identifies the same person.
 
-### [D017] Non-Unique SkillAAssociation Resolver
+### [D017] Non-Unique Skill Association Resolver
 
 **When to use:** For a table, structured list, schedule, or itinerary where D005 cannot identify one unique direct intersection because the requested phrase partially matches multiple or hierarchical row labels, or because a named person or group is adjacent to multiple event lines and times.
 

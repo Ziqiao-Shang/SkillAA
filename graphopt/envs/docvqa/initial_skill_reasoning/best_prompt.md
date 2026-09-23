@@ -17,7 +17,7 @@ Before the final answer, write exactly one plain-text graph execution record ins
 
 Do not cite a node or edge that was not actually applied. Do not include hidden token-level reasoning, confidence theater, graph notes, ungrounded image coordinates, tool logs, question IDs, or the reference answer.
 
-Each node below is one reusable part of the bundled SkillAA skill. `prereq` edges give required order; `enhance` edges are optional checks whose trigger must hold. Edge strength is priority, not evidence.
+Each node below is one reusable part of the bundled GraphSkillAA skill. `prereq` edges give required order; `enhance` edges are optional checks whose trigger must hold. Edge strength is priority, not evidence.
 
 Output exactly these three blocks in this order and no other text:
 

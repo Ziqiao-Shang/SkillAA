@@ -61,13 +61,13 @@ def validate_materialized_split(adapter: Any, cfg: dict[str, Any]) -> None:
         "test": list(getattr(loader, "test_items", []) or []),
     }
 
-    if protocol == "skillaa_update_quadruples_v1":
+    if protocol == "graphskillaa_update_quadruples_v1":
         from graphopt.runtime_envs.train_test_split import validate_train_test_dataset
 
         validate_train_test_dataset(adapter, "docvqa", split_dir, manifest)
         return
 
-    if protocol == "skillaa_train_validation":
+    if protocol == "graphskillaa_train_validation":
         expected = {"train": 800, "val": 200}
         loaded = {"train": len(pools["train"]), "val": len(pools["val"])}
         if loaded != expected or manifest.get("counts") != expected:

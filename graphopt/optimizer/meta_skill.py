@@ -1,4 +1,4 @@
-"""Epoch-level meta knowledge (SkillAA meta_skill analogue for graph edits).
+"""Epoch-level meta knowledge (GraphSkillAA meta_skill analogue for graph edits).
 
 Consumes improvement / regression / persistent_fail signals from longitudinal
 comparisons and gate history to guide the next epoch's optimizer.

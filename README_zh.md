@@ -1,14 +1,14 @@
-# SkillAA
+# GraphSkillAA
 
-SkillAA 是一个面向冻结语言模型的图结构外部技能优化框架。统一的技能图支持语义激活、失败归因、定向编辑、受影响样本重测和回滚。
+GraphSkillAA 是一个面向冻结语言模型的图结构外部技能优化框架。统一的技能图支持语义激活、失败归因、定向编辑、受影响样本重测和回滚。
 
-![SkillAA 框架](assets/skillaa-framework.png)
+![GraphSkillAA 框架](assets/graphskillaa-framework.png)
 
 ## 配置
 
 | 项目 | 固定值 |
 |---|---|
-| 方法 | 完整版 SkillAA |
+| 方法 | 完整版 GraphSkillAA |
 | 教师 | `gpt-5.6-sol` |
 | 学生 | `gpt-5.6-sol` |
 | 基准 | SearchQA、LiveMathematicianBench、DocVQA |
@@ -31,7 +31,7 @@ configs/                  实验配置
 data/                     划分元数据和准备好的基准数据载荷
 graphopt/                 图表示、归因、编辑和 Gates
 scripts/prepare_data.py  基准数据准备
-scripts/run_skillaa.py    实验启动器
+scripts/run_graphskillaa.py    实验启动器
 scripts/summarize_results.py
 scripts/verify_release.py
 tests/                    项目测试
@@ -72,45 +72,45 @@ python scripts/prepare_data.py --dataset docvqa
 你也可以按照文档手动准备文件结构，详见 [`data/README.md`](data/README.md)。在发起付费请求前，请检查数据载荷是否可读、完整、互不重叠，并与更新分组兼容：
 
 ```bash
-python scripts/run_skillaa.py --dataset searchqa --check-only
-python scripts/run_skillaa.py --dataset livemathematicianbench --check-only
-python scripts/run_skillaa.py --dataset docvqa --check-only
+python scripts/run_graphskillaa.py --dataset searchqa --check-only
+python scripts/run_graphskillaa.py --dataset livemathematicianbench --check-only
+python scripts/run_graphskillaa.py --dataset docvqa --check-only
 ```
 
 下载原始数据之前，可以先检查 ID 元数据：
 
 ```bash
-python scripts/run_skillaa.py --dataset searchqa --check-manifests
-python scripts/run_skillaa.py --dataset livemathematicianbench --check-manifests
-python scripts/run_skillaa.py --dataset docvqa --check-manifests
+python scripts/run_graphskillaa.py --dataset searchqa --check-manifests
+python scripts/run_graphskillaa.py --dataset livemathematicianbench --check-manifests
+python scripts/run_graphskillaa.py --dataset docvqa --check-manifests
 ```
 
-## 运行 SkillAA
+## 运行 GraphSkillAA
 
 运行单个基准：
 
 ```bash
-python scripts/run_skillaa.py --dataset searchqa
-python scripts/run_skillaa.py --dataset livemathematicianbench
-python scripts/run_skillaa.py --dataset docvqa
+python scripts/run_graphskillaa.py --dataset searchqa
+python scripts/run_graphskillaa.py --dataset livemathematicianbench
+python scripts/run_graphskillaa.py --dataset docvqa
 ```
 
 可以续跑部分完成的实验，而不会覆盖已经提交的状态：
 
 ```bash
-python scripts/run_skillaa.py --dataset searchqa --resume
+python scripts/run_graphskillaa.py --dataset searchqa --resume
 ```
 
 在不发起 API 调用的情况下查看锁定的命令：
 
 ```bash
-python scripts/run_skillaa.py --dataset searchqa --print-command
+python scripts/run_graphskillaa.py --dataset searchqa --print-command
 ```
 
 默认输出路径为：
 
 ```text
-outputs/skillaa/<dataset>/<run>/
+outputs/graphskillaa/<dataset>/<run>/
 ```
 
 重要产物包括 `config.json`、`trainer_state.json`、已提交的图快照、Gate 记录、逐样本 rollout 和 `final_test.json`。Held-out 结果仅用于评估，绝不会控制图的提交。
@@ -120,7 +120,7 @@ outputs/skillaa/<dataset>/<run>/
 实验套件运行完成后：
 
 ```bash
-python scripts/summarize_results.py --output-root outputs/skillaa
+python scripts/summarize_results.py --output-root outputs/graphskillaa
 ```
 
 该脚本会汇总已有的 `final_test.json` 结果并输出汇总表。

@@ -1,4 +1,4 @@
-# Fixed SkillAA release configuration.
+# Fixed GraphSkillAA release configuration.
 _base_: hyperparams.yaml
 
 model:

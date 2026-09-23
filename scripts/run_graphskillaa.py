@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run the fixed SkillAA/GraphOpt SkillAA protocol.
+"""Run the fixed GraphSkillAA/GraphOpt GraphSkillAA protocol.
 
 Public surface: three benchmarks, seeds 42/43/44, and a single model pairing
 (gpt-5.6-sol teacher + gpt-5.6-sol student).
@@ -68,7 +68,7 @@ def validate_manifest(dataset: str) -> dict:
     path = ROOT / "data" / dataset / "split_manifest.json"
     manifest = json.loads(path.read_text(encoding="utf-8"))
     expected = DATASETS[dataset]
-    if manifest.get("protocol") != "skillaa_update_quadruples_v1":
+    if manifest.get("protocol") != "graphskillaa_update_quadruples_v1":
         raise ValueError(f"{dataset}: wrong manifest protocol")
     if manifest.get("counts") != expected:
         raise ValueError(f"{dataset}: expected counts {expected}, got {manifest.get('counts')}")
@@ -222,7 +222,7 @@ def parse_args() -> argparse.Namespace:
         default="all",
         help=argparse.SUPPRESS,
     )
-    parser.add_argument("--output-root", type=Path, default=ROOT / "outputs" / "skillaa")
+    parser.add_argument("--output-root", type=Path, default=ROOT / "outputs" / "graphskillaa")
     parser.add_argument("--resume", action="store_true")
     parser.add_argument("--check-manifests", action="store_true", help="validate released IDs without raw benchmark payloads")
     parser.add_argument("--check-only", action="store_true", help="validate dependencies and fully materialized benchmark payloads")
@@ -275,7 +275,7 @@ def main() -> None:
         if run_dir.exists() and any(run_dir.iterdir()) and not args.resume:
             raise FileExistsError(f"refusing to overwrite {run_dir}; use --resume")
         run_dir.mkdir(parents=True, exist_ok=True)
-        print("[skillaa]", shlex.join(command), flush=True)
+        print("[graphskillaa]", shlex.join(command), flush=True)
         subprocess.run(command, cwd=ROOT, check=True)
 
 

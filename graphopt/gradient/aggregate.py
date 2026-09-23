@@ -1,4 +1,4 @@
-"""Aggregate: merge mini-batch graph patches (SkillAA Aggregate analogue).
+"""Aggregate: merge mini-batch graph patches (GraphSkillAA Aggregate analogue).
 
 Failure-driven patches take priority. Teacher mode uses hierarchical LLM merge;
 fallback uses **consensus merge** for nodes.

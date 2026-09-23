@@ -1,6 +1,6 @@
 """Reflect: trajectories + experience ledger → discrete graph edits.
 
-Minibatch dispatch mirrors ``skillaa.gradient.reflect.run_minibatch_reflect``:
+Minibatch dispatch mirrors ``graphskillaa.gradient.reflect.run_minibatch_reflect``:
 fail/success split, shuffle, split by ``minibatch_size``, one optimizer call per group.
 """
 
@@ -21,7 +21,7 @@ _HARD_EPS = 1e-9
 
 
 def _is_failure(r: dict[str, Any]) -> bool:
-    """SkillAA ``run_minibatch_reflect`` failure partition."""
+    """GraphSkillAA ``run_minibatch_reflect`` failure partition."""
     return not r.get("hard") or float(r.get("hard") or 0) < _HARD_EPS
 
 
@@ -176,7 +176,7 @@ def reflect(
     source_hint: str = "",
     ledger: ExperienceLedger | None = None,
 ) -> GraphPatch:
-    """One minibatch group → GraphPatch (SkillAA analyst-minibatch analogue)."""
+    """One minibatch group → GraphPatch (GraphSkillAA analyst-minibatch analogue)."""
     ledger = ledger or ExperienceLedger()
     if mode != "teacher" or chat_fn is None:
         return filter_edits(template_reflect(graph, results, ledger))
@@ -254,7 +254,7 @@ def reflect_minibatch(
     patches_dir: str | Path | None = None,
     workers: int = 1,
 ) -> tuple[list[GraphPatch], list[GraphPatch]]:
-    """SkillAA ``run_minibatch_reflect`` analogue for SkillGraph."""
+    """GraphSkillAA ``run_minibatch_reflect`` analogue for SkillGraph."""
     failures = [r for r in results if _is_failure(r)]
     successes = [r for r in results if _is_success(r)] if not failure_only else []
 

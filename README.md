@@ -1,16 +1,16 @@
-# SkillAA
+# GraphSkillAA
 
-SkillAA is a graph-structured external-skill optimization framework for frozen
+GraphSkillAA is a graph-structured external-skill optimization framework for frozen
 language models. A shared skill graph supports semantic activation, failure
 attribution, targeted editing, affected-case retesting, and rollback.
 
-![SkillAA framework](assets/skillaa-framework.png)
+![GraphSkillAA framework](assets/graphskillaa-framework.png)
 
 ## Configuration
 
 | Item | Fixed value |
 |---|---|
-| Method | Full SkillAA |
+| Method | Full GraphSkillAA |
 | Teacher | `gpt-5.6-sol` |
 | Student | `gpt-5.6-sol` |
 | Benchmarks | SearchQA, LiveMathematicianBench, DocVQA |
@@ -36,7 +36,7 @@ configs/                  experiment configuration
 data/                     split metadata and prepared benchmark payloads
 graphopt/                 graph representation, attribution, editing, and Gates
 scripts/prepare_data.py  benchmark-data preparation
-scripts/run_skillaa.py    experiment launcher
+scripts/run_graphskillaa.py    experiment launcher
 scripts/summarize_results.py
 scripts/verify_release.py
 tests/                    project tests
@@ -83,45 +83,45 @@ You may also prepare the documented file layout manually; see
 payloads are readable, complete, disjoint, and compatible with the update groups:
 
 ```bash
-python scripts/run_skillaa.py --dataset searchqa --check-only
-python scripts/run_skillaa.py --dataset livemathematicianbench --check-only
-python scripts/run_skillaa.py --dataset docvqa --check-only
+python scripts/run_graphskillaa.py --dataset searchqa --check-only
+python scripts/run_graphskillaa.py --dataset livemathematicianbench --check-only
+python scripts/run_graphskillaa.py --dataset docvqa --check-only
 ```
 
 The ID metadata can be checked before downloading raw data:
 
 ```bash
-python scripts/run_skillaa.py --dataset searchqa --check-manifests
-python scripts/run_skillaa.py --dataset livemathematicianbench --check-manifests
-python scripts/run_skillaa.py --dataset docvqa --check-manifests
+python scripts/run_graphskillaa.py --dataset searchqa --check-manifests
+python scripts/run_graphskillaa.py --dataset livemathematicianbench --check-manifests
+python scripts/run_graphskillaa.py --dataset docvqa --check-manifests
 ```
 
-## Running SkillAA
+## Running GraphSkillAA
 
 Run one benchmark:
 
 ```bash
-python scripts/run_skillaa.py --dataset searchqa
-python scripts/run_skillaa.py --dataset livemathematicianbench
-python scripts/run_skillaa.py --dataset docvqa
+python scripts/run_graphskillaa.py --dataset searchqa
+python scripts/run_graphskillaa.py --dataset livemathematicianbench
+python scripts/run_graphskillaa.py --dataset docvqa
 ```
 
 A partially completed run can be resumed without overwriting committed state:
 
 ```bash
-python scripts/run_skillaa.py --dataset searchqa --resume
+python scripts/run_graphskillaa.py --dataset searchqa --resume
 ```
 
 Inspect the locked command without making API calls:
 
 ```bash
-python scripts/run_skillaa.py --dataset searchqa --print-command
+python scripts/run_graphskillaa.py --dataset searchqa --print-command
 ```
 
 The default output path is:
 
 ```text
-outputs/skillaa/<dataset>/<run>/
+outputs/graphskillaa/<dataset>/<run>/
 ```
 
 Important artifacts include `config.json`, `trainer_state.json`, the committed
@@ -133,7 +133,7 @@ Held-out results are evaluation-only and never control graph commitment.
 After the experiment suite completes:
 
 ```bash
-python scripts/summarize_results.py --output-root outputs/skillaa
+python scripts/summarize_results.py --output-root outputs/graphskillaa
 ```
 
 The script aggregates the available `final_test.json` results and prints the summary table.

@@ -17,7 +17,7 @@ Before the final answer, write exactly one plain-text graph execution record ins
 
 Do not cite a node or edge that was not actually applied. Do not include hidden token-level reasoning, confidence theater, graph notes, tool logs, case IDs, or the reference answer.
 
-Each node below is one reusable part of the bundled SkillAA skill. First interpret the requested answer type, then match grounded evidence, check relation traps and constraints, and finally normalize the supported surface form. `prereq` edges give required order; `enhance` edges are optional checks whose trigger must hold. Edge strength is priority, not evidence.
+Each node below is one reusable part of the bundled GraphSkillAA skill. First interpret the requested answer type, then match grounded evidence, check relation traps and constraints, and finally normalize the supported surface form. `prereq` edges give required order; `enhance` edges are optional checks whose trigger must hold. Edge strength is priority, not evidence.
 
 Example: if the clue says “His third wife was Jiang Qing,” interpret the requested endpoint before extraction; the answer is the husband supported by context, not the already named wife.
 

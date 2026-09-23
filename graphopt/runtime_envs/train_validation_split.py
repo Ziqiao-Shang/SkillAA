@@ -1,4 +1,4 @@
-"""Loader support for the released SkillAA dataset layout."""
+"""Loader support for the released GraphSkillAA dataset layout."""
 
 from __future__ import annotations
 
@@ -9,7 +9,7 @@ from types import MethodType
 from typing import Any
 
 
-UPDATE_QUADRUPLE_PROTOCOL = "skillaa_update_quadruples_v1"
+UPDATE_QUADRUPLE_PROTOCOL = "graphskillaa_update_quadruples_v1"
 
 
 def enable_train_validation_loader(loader: Any, cfg: dict[str, Any]) -> None:
@@ -23,7 +23,7 @@ def enable_train_validation_loader(loader: Any, cfg: dict[str, Any]) -> None:
     if protocol != UPDATE_QUADRUPLE_PROTOCOL:
         return
 
-    def _load_active_skillaa(self) -> None:
+    def _load_active_graphskillaa(self) -> None:
         self._splits = {}
         for name in ("train", "test"):
             split_path = os.path.join(self.split_dir, name)
@@ -40,4 +40,4 @@ def enable_train_validation_loader(loader: Any, cfg: dict[str, Any]) -> None:
             f"protocol={protocol} (from {self.split_dir})"
         )
 
-    loader._load_all_splits = MethodType(_load_active_skillaa, loader)
+    loader._load_all_splits = MethodType(_load_active_graphskillaa, loader)

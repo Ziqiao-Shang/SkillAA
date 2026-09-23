@@ -1,4 +1,4 @@
-"""Validation for the final SkillAA train/test layout."""
+"""Validation for the final GraphSkillAA train/test layout."""
 
 from __future__ import annotations
 
@@ -21,7 +21,7 @@ def validate_train_test_dataset(
 ) -> None:
     """Fail closed unless train is complete and test is strictly held out."""
     if (
-        manifest.get("protocol") != "skillaa_update_quadruples_v1"
+        manifest.get("protocol") != "graphskillaa_update_quadruples_v1"
         or manifest.get("split_layout") != ["train", "test"]
         or manifest.get("no_validation_split") is not True
         or manifest.get("source_train_and_validation_form_update_pool") is not True

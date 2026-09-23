@@ -1,4 +1,4 @@
-"""SkillAA config loading engine — structured YAML with inheritance.
+"""GraphSkillAA config loading engine — structured YAML with inheritance.
 
 Supports two config formats:
   1. **Structured** (new): sections like ``model``, ``train``, ``gradient``,
