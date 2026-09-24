@@ -4,7 +4,21 @@ GraphSkillAA is a graph-structured external-skill optimization framework for fro
 language models. A shared skill graph supports semantic activation, failure
 attribution, targeted editing, affected-case retesting, and rollback.
 
+[GitHub repository](https://github.com/Ziqiao-Shang/SkillAA)
+
 ![GraphSkillAA framework](assets/graphskillaa-framework.png)
+
+## Reported results
+
+The released configuration uses three fixed seeds and evaluates each terminal
+graph once on the held-out split. The paper reports the following mean hard
+accuracies for GraphSkillAA with `gpt-5.6-sol`:
+
+| Benchmark | Accuracy |
+|---|---:|
+| SearchQA | 81.5% |
+| LiveMathematicianBench | 66.7% |
+| DocVQA | 91.2% |
 
 ## Configuration
 
@@ -51,6 +65,9 @@ optimization framework is required at runtime.
 Python 3.10 or newer is required.
 
 ```bash
+git clone https://github.com/Ziqiao-Shang/SkillAA.git GraphSkillAA
+cd GraphSkillAA
+
 python -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
@@ -141,13 +158,14 @@ The script aggregates the available `final_test.json` results and prints the sum
 ## Local verification
 
 ```bash
+PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s tests -v
+PYTHONPYCACHEPREFIX=/tmp/graphskillaa_pyc python -m compileall -q graphopt scripts
 python scripts/verify_release.py
-python -m compileall -q graphopt scripts
-python -m unittest discover -s tests -v
 ```
 
 These checks validate the model configuration, update-only quadruple manifests,
-imports, and command construction. They do not execute model requests.
+imports, command construction, and release hygiene. They do not execute model
+requests.
 
 ## Experiment notes
 
